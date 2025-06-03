@@ -2,9 +2,164 @@
 <html lang=en>
 <head>
     <meta charset=utf-8>
+    <style>
+        .table-container {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            background-color: #f1f1f1;
+            z-index: 1;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+    </style>
     <title>blah</title>
 </head>
 <body>
-<p>I'm the content</p>
+<div class="table-container">
+    <table>
+        <thead>
+        <tr>
+            <th>%rax dec</th>
+            <th>%rax hex</th>
+            <th>System call</th>
+            <th>%rdi</th>
+            <th>%rsi</th>
+            <th>%rdx</th>
+            <th>%r10</th>
+            <th>%r8</th>
+            <th>%r9</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>sys_read</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>sys_write</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>sys_open</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>sys_close</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4</td>
+            <td>sys_stat</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>sys_fstat</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>6</td>
+            <td>sys_lstat</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>7</td>
+            <td>sys_poll</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>8</td>
+            <td>sys_lseek</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>9</td>
+            <td>sys_mmap</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
