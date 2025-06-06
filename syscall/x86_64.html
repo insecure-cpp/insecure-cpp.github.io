@@ -63,7 +63,7 @@
         <tr>
             <td>0</td>
             <td>0x0</td>
-            <td>sys_read</td>
+            <td>read</td>
             <td><a href="https://man7.org/linux/man-pages/man2/read.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>char *buf</td>
@@ -75,7 +75,7 @@
         <tr>
             <td>1</td>
             <td>0x1</td>
-            <td>sys_write</td>
+            <td>write</td>
             <td><a href="https://man7.org/linux/man-pages/man2/write.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>const char *buf</td>
@@ -87,7 +87,7 @@
         <tr>
             <td>2</td>
             <td>0x2</td>
-            <td>sys_open</td>
+            <td>open</td>
             <td><a href="https://man7.org/linux/man-pages/man2/open.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>int flags</td>
@@ -99,7 +99,7 @@
         <tr>
             <td>3</td>
             <td>0x3</td>
-            <td>sys_close</td>
+            <td>close</td>
             <td><a href="https://man7.org/linux/man-pages/man2/close.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>-</td>
@@ -111,7 +111,7 @@
         <tr>
             <td>4</td>
             <td>0x4</td>
-            <td>sys_stat</td>
+            <td>stat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/stat.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>struct stat *statbuf</td>
@@ -123,7 +123,7 @@
         <tr>
             <td>5</td>
             <td>0x5</td>
-            <td>sys_fstat</td>
+            <td>fstat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fstat.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>struct stat *statbuf</td>
@@ -135,7 +135,7 @@
         <tr>
             <td>6</td>
             <td>0x6</td>
-            <td>sys_lstat</td>
+            <td>lstat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lstat.2.html">man page</a></td>
             <td>fconst char *filename</td>
             <td>struct stat *statbuf</td>
@@ -147,7 +147,7 @@
         <tr>
             <td>7</td>
             <td>0x7</td>
-            <td>sys_poll</td>
+            <td>poll</td>
             <td><a href="https://man7.org/linux/man-pages/man2/poll.2.html">man page</a></td>
             <td>struct poll_fd *ufds</td>
             <td>unsigned int nfds</td>
@@ -159,7 +159,7 @@
         <tr>
             <td>8</td>
             <td>0x8</td>
-            <td>sys_lseek</td>
+            <td>lseek</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lseek.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>off_t offset</td>
@@ -171,7 +171,7 @@
         <tr>
             <td>9</td>
             <td>0x9</td>
-            <td>sys_mmap</td>
+            <td>mmap</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mmap.2.html">man page</a></td>
             <td>unsigned long addr</td>
             <td>unsigned long len</td>
@@ -183,7 +183,7 @@
         <tr>
             <td>10</td>
             <td>0xA</td>
-            <td>sys_mprotect</td>
+            <td>mprotect</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mprotect.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>size_t len</td>
@@ -195,7 +195,7 @@
         <tr>
             <td>11</td>
             <td>0xB</td>
-            <td>sys_munmap</td>
+            <td>munmap</td>
             <td><a href="https://man7.org/linux/man-pages/man2/munmap.2.html">man page</a></td>
             <td>unsigned long addr</td>
             <td>size_t len</td>
@@ -207,7 +207,7 @@
         <tr>
             <td>12</td>
             <td>0xC</td>
-            <td>sys_brk</td>
+            <td>brk</td>
             <td><a href="https://man7.org/linux/man-pages/man2/brk.2.html">man page</a></td>
             <td>unsigned long brk</td>
             <td>-</td>
@@ -219,7 +219,7 @@
         <tr>
             <td>13</td>
             <td>0xD</td>
-            <td>sys_rt_sigaction</td>
+            <td>rt_sigaction</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigaction.2.html">man page</a></td>
             <td>int sig</td>
             <td>const struct sigaction *act</td>
@@ -231,7 +231,7 @@
         <tr>
             <td>14</td>
             <td>0xE</td>
-            <td>sys_rt_sigprocmask</td>
+            <td>rt_sigprocmask</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigprocmask.2.html">man page</a></td>
             <td>int how</td>
             <td>sigset_t *nset</td>
@@ -243,7 +243,7 @@
         <tr>
             <td>15</td>
             <td>0xF</td>
-            <td>sys_rt_sigreturn</td>
+            <td>rt_sigreturn</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigreturn.2.html">man page</a></td>
             <td>unsigned long __unused</td>
             <td>-</td>
@@ -255,7 +255,7 @@
         <tr>
             <td>16</td>
             <td>0x10</td>
-            <td>sys_ioctl</td>
+            <td>ioctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/ioctl.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>unsigned int cmd</td>
@@ -267,7 +267,7 @@
         <tr>
             <td>17</td>
             <td>0x11</td>
-            <td>sys_pread64</td>
+            <td>pread64</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pread64.2.html">man page</a></td>
             <td>unsigned long fd</td>
             <td>char *buf</td>
@@ -279,7 +279,7 @@
         <tr>
             <td>18</td>
             <td>0x12</td>
-            <td>sys_pwrite64</td>
+            <td>pwrite64</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pwrite64.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>const char *buf</td>
@@ -291,7 +291,7 @@
         <tr>
             <td>19</td>
             <td>0x13</td>
-            <td>sys_readv</td>
+            <td>readv</td>
             <td><a href="https://man7.org/linux/man-pages/man2/readv.2.html">man page</a></td>
             <td>unsigned long fd</td>
             <td>const struct iovec *vec</td>
@@ -303,7 +303,7 @@
         <tr>
             <td>20</td>
             <td>0x14</td>
-            <td>sys_writev</td>
+            <td>writev</td>
             <td><a href="https://man7.org/linux/man-pages/man2/writev.2.html">man page</a></td>
             <td>unsigned long fd</td>
             <td>const struct iovec *vec</td>
@@ -315,7 +315,7 @@
         <tr>
             <td>21</td>
             <td>0x15</td>
-            <td>sys_access</td>
+            <td>access</td>
             <td><a href="https://man7.org/linux/man-pages/man2/access.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>int mode</td>
@@ -327,7 +327,7 @@
         <tr>
             <td>22</td>
             <td>0x16</td>
-            <td>sys_pipe</td>
+            <td>pipe</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pipe.2.html">man page</a></td>
             <td>int *filedes</td>
             <td>-</td>
@@ -339,7 +339,7 @@
         <tr>
             <td>23</td>
             <td>0x17</td>
-            <td>sys_select</td>
+            <td>select</td>
             <td><a href="https://man7.org/linux/man-pages/man2/select.2.html">man page</a></td>
             <td>int n</td>
             <td>fd_set *inp</td>
@@ -351,7 +351,7 @@
         <tr>
             <td>24</td>
             <td>0x18</td>
-            <td>sys_sched_yield</td>
+            <td>sched_yield</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_yield.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -363,7 +363,7 @@
         <tr>
             <td>25</td>
             <td>0x19</td>
-            <td>sys_mremap</td>
+            <td>mremap</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mremap.2.html">man page</a></td>
             <td>unsigned long addr</td>
             <td>unsigned long old_len</td>
@@ -375,7 +375,7 @@
         <tr>
             <td>26</td>
             <td>0x1A</td>
-            <td>sys_msync</td>
+            <td>msync</td>
             <td><a href="https://man7.org/linux/man-pages/man2/msync.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>size_t len</td>
@@ -387,7 +387,7 @@
         <tr>
             <td>27</td>
             <td>0x1B</td>
-            <td>sys_mincore</td>
+            <td>mincore</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mincore.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>size_t len</td>
@@ -399,7 +399,7 @@
         <tr>
             <td>28</td>
             <td>0x1C</td>
-            <td>sys_madvise</td>
+            <td>madvise</td>
             <td><a href="https://man7.org/linux/man-pages/man2/madvise.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>size_t len_in</td>
@@ -411,7 +411,7 @@
         <tr>
             <td>29</td>
             <td>0x1D</td>
-            <td>sys_shmget</td>
+            <td>shmget</td>
             <td><a href="https://man7.org/linux/man-pages/man2/shmget.2.html">man page</a></td>
             <td>key_t key</td>
             <td>size_t size</td>
@@ -423,7 +423,7 @@
         <tr>
             <td>30</td>
             <td>0x1E</td>
-            <td>sys_shmat</td>
+            <td>shmat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/shmat.2.html">man page</a></td>
             <td>int shmid</td>
             <td>char *shmaddr</td>
@@ -435,7 +435,7 @@
         <tr>
             <td>31</td>
             <td>0x1F</td>
-            <td>sys_shmctl</td>
+            <td>shmctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/shmctl.2.html">man page</a></td>
             <td>int shmid</td>
             <td>int cmd</td>
@@ -447,7 +447,7 @@
         <tr>
             <td>32</td>
             <td>0x20</td>
-            <td>sys_dup</td>
+            <td>dup</td>
             <td><a href="https://man7.org/linux/man-pages/man2/dup.2.html">man page</a></td>
             <td>unsigned int fildes</td>
             <td>-</td>
@@ -459,7 +459,7 @@
         <tr>
             <td>33</td>
             <td>0x21</td>
-            <td>sys_dup2</td>
+            <td>dup2</td>
             <td><a href="https://man7.org/linux/man-pages/man2/dup2.2.html">man page</a></td>
             <td>unsigned int oldfd</td>
             <td>unsigned int newfd</td>
@@ -471,7 +471,7 @@
         <tr>
             <td>34</td>
             <td>0x22</td>
-            <td>sys_pause</td>
+            <td>pause</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pause.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -483,7 +483,7 @@
         <tr>
             <td>35</td>
             <td>0x23</td>
-            <td>sys_nanosleep</td>
+            <td>nanosleep</td>
             <td><a href="https://man7.org/linux/man-pages/man2/nanosleep.2.html">man page</a></td>
             <td>struct timespec *rqtp</td>
             <td>struct timespec *rmtp</td>
@@ -495,7 +495,7 @@
         <tr>
             <td>36</td>
             <td>0x24</td>
-            <td>sys_getitimer</td>
+            <td>getitimer</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getitimer.2.html">man page</a></td>
             <td>int which</td>
             <td>struct itimerval *value</td>
@@ -507,7 +507,7 @@
         <tr>
             <td>37</td>
             <td>0x25</td>
-            <td>sys_alarm</td>
+            <td>alarm</td>
             <td><a href="https://man7.org/linux/man-pages/man2/alarm.2.html">man page</a></td>
             <td>unsigned int seconds</td>
             <td>-</td>
@@ -519,7 +519,7 @@
         <tr>
             <td>38</td>
             <td>0x26</td>
-            <td>sys_setitimer</td>
+            <td>setitimer</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setitimer.2.html">man page</a></td>
             <td>int which</td>
             <td>struct itimerval *value</td>
@@ -531,7 +531,7 @@
         <tr>
             <td>39</td>
             <td>0x27</td>
-            <td>sys_getpid</td>
+            <td>getpid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getpid.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -543,7 +543,7 @@
         <tr>
             <td>40</td>
             <td>0x28</td>
-            <td>sys_sendfile</td>
+            <td>sendfile</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sendfile.2.html">man page</a></td>
             <td>int out_fd</td>
             <td>int in_fd</td>
@@ -555,7 +555,7 @@
         <tr>
             <td>41</td>
             <td>0x29</td>
-            <td>sys_socket</td>
+            <td>socket</td>
             <td><a href="https://man7.org/linux/man-pages/man2/socket.2.html">man page</a></td>
             <td>int family</td>
             <td>int type</td>
@@ -567,7 +567,7 @@
         <tr>
             <td>42</td>
             <td>0x2A</td>
-            <td>sys_connect</td>
+            <td>connect</td>
             <td><a href="https://man7.org/linux/man-pages/man2/connect.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct sockaddr *uservaddr</td>
@@ -579,7 +579,7 @@
         <tr>
             <td>43</td>
             <td>0x2B</td>
-            <td>sys_accept</td>
+            <td>accept</td>
             <td><a href="https://man7.org/linux/man-pages/man2/accept.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct sockaddr *upeer_sockaddr</td>
@@ -591,7 +591,7 @@
         <tr>
             <td>44</td>
             <td>0x2C</td>
-            <td>sys_sendto</td>
+            <td>sendto</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sendto.2.html">man page</a></td>
             <td>int fd</td>
             <td>void *buff</td>
@@ -603,7 +603,7 @@
         <tr>
             <td>45</td>
             <td>0x2D</td>
-            <td>sys_recvfrom</td>
+            <td>recvfrom</td>
             <td><a href="https://man7.org/linux/man-pages/man2/recvfrom.2.html">man page</a></td>td>
             <td>int fd</td>
             <td>void *ubuf</td>
@@ -615,7 +615,7 @@
         <tr>
             <td>46</td>
             <td>0x2E</td>
-            <td>sys_sendmsg</td>
+            <td>sendmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sendmsg.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct msghdr *msg</td>
@@ -627,7 +627,7 @@
         <tr>
             <td>47</td>
             <td>0x2F</td>
-            <td>sys_recvmsg</td>
+            <td>recvmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/recvmsg.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct msghdr *msg</td>
@@ -639,7 +639,7 @@
         <tr>
             <td>48</td>
             <td>0x30</td>
-            <td>sys_shutdown</td>
+            <td>shutdown</td>
             <td><a href="https://man7.org/linux/man-pages/man2/shutdown.2.html">man page</a></td>
             <td>int fd</td>
             <td>int how</td>
@@ -651,7 +651,7 @@
         <tr>
             <td>49</td>
             <td>0x31</td>
-            <td>sys_bind</td>
+            <td>bind</td>
             <td><a href="https://man7.org/linux/man-pages/man2/bind.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct sokaddr *umyaddr</td>
@@ -663,7 +663,7 @@
         <tr>
             <td>50</td>
             <td>0x32</td>
-            <td>sys_listen</td>
+            <td>listen</td>
             <td><a href="https://man7.org/linux/man-pages/man2/listen.2.html">man page</a></td>
             <td>int fd</td>
             <td>int backlog</td>
@@ -675,7 +675,7 @@
         <tr>
             <td>51</td>
             <td>0x33</td>
-            <td>sys_getsockname</td>
+            <td>getsockname</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getsockname.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct sockaddr *usockaddr</td>
@@ -687,7 +687,7 @@
         <tr>
             <td>52</td>
             <td>0x34</td>
-            <td>sys_getpeername</td>
+            <td>getpeername</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getpeername.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct sockaddr *usockaddr</td>
@@ -699,7 +699,7 @@
         <tr>
             <td>53</td>
             <td>0x35</td>
-            <td>sys_socketpair</td>
+            <td>socketpair</td>
             <td><a href="https://man7.org/linux/man-pages/man2/socketpair.2.html">man page</a></td>
             <td>int family</td>
             <td>int type</td>
@@ -711,7 +711,7 @@
         <tr>
             <td>54</td>
             <td>0x36</td>
-            <td>sys_setsockopt</td>
+            <td>setsockopt</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setsockopt.2.html">man page</a></td>
             <td>int fd</td>
             <td>int level</td>
@@ -723,7 +723,7 @@
         <tr>
             <td>55</td>
             <td>0x37</td>
-            <td>sys_getsockopt</td>
+            <td>getsockopt</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getsockopt.2.html">man page</a></td>
             <td>int fd</td>
             <td>int level</td>
@@ -735,7 +735,7 @@
         <tr>
             <td>56</td>
             <td>0x38</td>
-            <td>sys_clone</td>
+            <td>clone</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clone.2.html">man page</a></td>
             <td>unsigned long clone_flags</td>
             <td>unsigned long newsp</td>
@@ -747,7 +747,7 @@
         <tr>
             <td>57</td>
             <td>0x39</td>
-            <td>sys_fork</td>
+            <td>fork</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fork.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -759,7 +759,7 @@
         <tr>
             <td>58</td>
             <td>0x3A</td>
-            <td>sys_vfork</td>
+            <td>vfork</td>
             <td><a href="https://man7.org/linux/man-pages/man2/vfork.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -771,7 +771,7 @@
         <tr>
             <td>59</td>
             <td>0x3B</td>
-            <td>sys_execve</td>
+            <td>execve</td>
             <td><a href="https://man7.org/linux/man-pages/man2/execve.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>const char *const argv[]</td>
@@ -783,7 +783,7 @@
         <tr>
             <td>60</td>
             <td>0x3C</td>
-            <td>sys_exit</td>
+            <td>exit</td>
             <td><a href="https://man7.org/linux/man-pages/man2/exit.2.html">man page</a></td>
             <td>int error_code</td>
             <td>-</td>
@@ -795,7 +795,7 @@
         <tr>
             <td>61</td>
             <td>0x3D</td>
-            <td>sys_wait4</td>
+            <td>wait4</td>
             <td><a href="https://man7.org/linux/man-pages/man2/wait4.2.html">man page</a></td>
             <td>pid_t upid</td>
             <td>int *stat_addr</td>
@@ -807,7 +807,7 @@
         <tr>
             <td>62</td>
             <td>0x3E</td>
-            <td>sys_kill</td>
+            <td>kill</td>
             <td><a href="https://man7.org/linux/man-pages/man2/kill.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>int sig</td>
@@ -819,7 +819,7 @@
         <tr>
             <td>63</td>
             <td>0x3F</td>
-            <td>sys_uname</td>
+            <td>uname</td>
             <td><a href="https://man7.org/linux/man-pages/man2/uname.2.html">man page</a></td>
             <td>struct old_utsname *name</td>
             <td>-</td>
@@ -831,7 +831,7 @@
         <tr>
             <td>64</td>
             <td>0x40</td>
-            <td>sys_semget</td>
+            <td>semget</td>
             <td><a href="https://man7.org/linux/man-pages/man2/semget.2.html">man page</a></td>
             <td>key_t key</td>
             <td>int nsems</td>
@@ -843,7 +843,7 @@
         <tr>
             <td>65</td>
             <td>0x41</td>
-            <td>sys_semop</td>
+            <td>semop</td>
             <td><a href="https://man7.org/linux/man-pages/man2/semop.2.html">man page</a></td>
             <td>int semid</td>
             <td>struct sembuf *tsops</td>
@@ -855,7 +855,7 @@
         <tr>
             <td>66</td>
             <td>0x42</td>
-            <td>sys_semctl</td>
+            <td>semctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/semctl.2.html">man page</a></td>
             <td>int semid</td>
             <td>int semnum</td>
@@ -867,7 +867,7 @@
         <tr>
             <td>67</td>
             <td>0x43</td>
-            <td>sys_shmdt</td>
+            <td>shmdt</td>
             <td><a href="https://man7.org/linux/man-pages/man2/shmdt.2.html">man page</a></td>
             <td>char *shmaddr</td>
             <td>-</td>
@@ -879,7 +879,7 @@
         <tr>
             <td>68</td>
             <td>0x44</td>
-            <td>sys_msgget</td>
+            <td>msgget</td>
             <td><a href="https://man7.org/linux/man-pages/man2/msgget.2.html">man page</a></td>
             <td>key_t key</td>
             <td>int msgflg</td>
@@ -891,7 +891,7 @@
         <tr>
             <td>69</td>
             <td>0x45</td>
-            <td>sys_msgsnd</td>
+            <td>msgsnd</td>
             <td><a href="https://man7.org/linux/man-pages/man2/msgsnd.2.html">man page</a></td>
             <td>int msqid</td>
             <td>struct msgbuf *msgp</td>
@@ -903,7 +903,7 @@
         <tr>
             <td>70</td>
             <td>0x46</td>
-            <td>sys_msgrcv</td>
+            <td>msgrcv</td>
             <td><a href="https://man7.org/linux/man-pages/man2/msgrcv.2.html">man page</a></td>
             <td>int msqid</td>
             <td>struct msgbuf *msgp</td>
@@ -915,7 +915,7 @@
         <tr>
             <td>71</td>
             <td>0x47</td>
-            <td>sys_msgctl</td>
+            <td>msgctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/msgctl.2.html">man page</a></td>
             <td>int msqid</td>
             <td>int cmd</td>
@@ -927,7 +927,7 @@
         <tr>
             <td>72</td>
             <td>0x48</td>
-            <td>sys_fcntl</td>
+            <td>fcntl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fcntl.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>unsigned int cmd</td>
@@ -939,7 +939,7 @@
         <tr>
             <td>73</td>
             <td>0x49</td>
-            <td>sys_flock</td>
+            <td>flock</td>
             <td><a href="https://man7.org/linux/man-pages/man2/flock.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>unsigned int cmd</td>
@@ -951,7 +951,7 @@
         <tr>
             <td>74</td>
             <td>0x4A</td>
-            <td>sys_fsync</td>
+            <td>fsync</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fsync.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>-</td>
@@ -963,7 +963,7 @@
         <tr>
             <td>75</td>
             <td>0x4B</td>
-            <td>sys_fdatasync</td>
+            <td>fdatasync</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fdatasync.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>-</td>
@@ -975,7 +975,7 @@
         <tr>
             <td>76</td>
             <td>0x4C</td>
-            <td>sys_truncate</td>
+            <td>truncate</td>
             <td><a href="https://man7.org/linux/man-pages/man2/truncate.2.html">man page</a></td>
             <td>const char *path</td>
             <td>long length</td>
@@ -987,7 +987,7 @@
         <tr>
             <td>77</td>
             <td>0x4D</td>
-            <td>sys_ftruncate</td>
+            <td>ftruncate</td>
             <td><a href="https://man7.org/linux/man-pages/man2/ftruncate.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>unsigned long length</td>
@@ -999,7 +999,7 @@
         <tr>
             <td>78</td>
             <td>0x4E</td>
-            <td>sys_getdents</td>
+            <td>getdents</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getdents.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>struct linux_dirent *dirent</td>
@@ -1011,7 +1011,7 @@
         <tr>
             <td>79</td>
             <td>0x4F</td>
-            <td>sys_getcwd</td>
+            <td>getcwd</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getcwd.2.html">man page</a></td>
             <td>char *buf</td>
             <td>unsigned long size</td>
@@ -1023,7 +1023,7 @@
         <tr>
             <td>80</td>
             <td>0x50</td>
-            <td>sys_chdir</td>
+            <td>chdir</td>
             <td><a href="https://man7.org/linux/man-pages/man2/chdir.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>-</td>
@@ -1035,7 +1035,7 @@
         <tr>
             <td>81</td>
             <td>0x51</td>
-            <td>sys_fchdir</td>
+            <td>fchdir</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fchdir.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>-</td>
@@ -1047,7 +1047,7 @@
         <tr>
             <td>82</td>
             <td>0x52</td>
-            <td>sys_rename</td>
+            <td>rename</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rename.2.html">man page</a></td>
             <td>const char *oldname</td>
             <td>const char *newname</td>
@@ -1059,7 +1059,7 @@
         <tr>
             <td>83</td>
             <td>0x53</td>
-            <td>sys_mkdir</td>
+            <td>mkdir</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mkdir.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>int mode</td>
@@ -1071,7 +1071,7 @@
         <tr>
             <td>84</td>
             <td>0x54</td>
-            <td>sys_rmdir</td>
+            <td>rmdir</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rmdir.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>-</td>
@@ -1083,7 +1083,7 @@
         <tr>
             <td>85</td>
             <td>0x55</td>
-            <td>sys_creat</td>
+            <td>creat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/creat.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>int mode</td>
@@ -1095,7 +1095,7 @@
         <tr>
             <td>86</td>
             <td>0x56</td>
-            <td>sys_link</td>
+            <td>link</td>
             <td><a href="https://man7.org/linux/man-pages/man2/link.2.html">man page</a></td>
             <td>const char *oldname</td>
             <td>const char *newname</td>
@@ -1107,7 +1107,7 @@
         <tr>
             <td>87</td>
             <td>0x57</td>
-            <td>sys_unlink</td>
+            <td>unlink</td>
             <td><a href="https://man7.org/linux/man-pages/man2/unlink.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>-</td>
@@ -1119,7 +1119,7 @@
         <tr>
             <td>88</td>
             <td>0x58</td>
-            <td>sys_symlink</td>
+            <td>symlink</td>
             <td><a href="https://man7.org/linux/man-pages/man2/symlink.2.html">man page</a></td>
             <td>const char *oldname</td>
             <td>const char *newname</td>
@@ -1131,7 +1131,7 @@
         <tr>
             <td>89</td>
             <td>0x59</td>
-            <td>sys_readlink</td>
+            <td>readlink</td>
             <td><a href="https://man7.org/linux/man-pages/man2/readlink.2.html">man page</a></td>
             <td>const char *path</td>
             <td>char *buf</td>
@@ -1143,7 +1143,7 @@
         <tr>
             <td>90</td>
             <td>0x5A</td>
-            <td>sys_chmod</td>
+            <td>chmod</td>
             <td><a href="https://man7.org/linux/man-pages/man2/chmod.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>mode_t mode</td>
@@ -1155,7 +1155,7 @@
         <tr>
             <td>91</td>
             <td>0x5B</td>
-            <td>sys_fchmod</td>
+            <td>fchmod</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fchmod.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>mode_t mode</td>
@@ -1167,7 +1167,7 @@
         <tr>
             <td>92</td>
             <td>0x5C</td>
-            <td>sys_chown</td>
+            <td>chown</td>
             <td><a href="https://man7.org/linux/man-pages/man2/chown.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>uid_t user</td>
@@ -1179,7 +1179,7 @@
         <tr>
             <td>93</td>
             <td>0x5D</td>
-            <td>sys_fchown</td>
+            <td>fchown</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fchown.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>uid_t user</td>
@@ -1191,7 +1191,7 @@
         <tr>
             <td>94</td>
             <td>0x5E</td>
-            <td>sys_lchown</td>
+            <td>lchown</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lchown.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>uid_t user</td>
@@ -1203,7 +1203,7 @@
         <tr>
             <td>95</td>
             <td>0x5F</td>
-            <td>sys_umask</td>
+            <td>umask</td>
             <td><a href="https://man7.org/linux/man-pages/man2/umask.2.html">man page</a></td>
             <td>int mask</td>
             <td>-</td>
@@ -1215,7 +1215,7 @@
         <tr>
             <td>96</td>
             <td>0x60</td>
-            <td>sys_gettimeofday</td>
+            <td>gettimeofday</td>
             <td><a href="https://man7.org/linux/man-pages/man2/gettimeofday.2.html">man page</a></td>
             <td>struct timeval *tv</td>
             <td>struct timezone *tz</td>
@@ -1227,7 +1227,7 @@
         <tr>
             <td>97</td>
             <td>0x61</td>
-            <td>sys_getrlimit</td>
+            <td>getrlimit</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getrlimit.2.html">man page</a></td>
             <td>unsigned int resource</td>
             <td>struct rlimit *rlim</td>
@@ -1239,7 +1239,7 @@
         <tr>
             <td>98</td>
             <td>0x62</td>
-            <td>sys_getrusage</td>
+            <td>getrusage</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getrusage.2.html">man page</a></td>
             <td>int who</td>
             <td>struct rusage *ru</td>
@@ -1251,7 +1251,7 @@
         <tr>
             <td>99</td>
             <td>0x63</td>
-            <td>sys_sysinfo</td>
+            <td>sysinfo</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sysinfo.2.html">man page</a></td>
             <td>struct sysinfo *info</td>
             <td>-</td>
@@ -1263,7 +1263,7 @@
         <tr>
             <td>100</td>
             <td>0x64</td>
-            <td>sys_times</td>
+            <td>times</td>
             <td><a href="https://man7.org/linux/man-pages/man2/times.2.html">man page</a></td>
             <td>struct tms *tbuf</td>
             <td>-</td>
@@ -1275,7 +1275,7 @@
         <tr>
             <td>101</td>
             <td>0x65</td>
-            <td>sys_ptrace</td>
+            <td>ptrace</td>
             <td><a href="https://man7.org/linux/man-pages/man2/ptrace.2.html">man page</a></td>
             <td>long request</td>
             <td>long pid</td>
@@ -1287,7 +1287,7 @@
         <tr>
             <td>102</td>
             <td>0x66</td>
-            <td>sys_getuid</td>
+            <td>getuid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getuid.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1299,7 +1299,7 @@
         <tr>
             <td>103</td>
             <td>0x67</td>
-            <td>sys_syslog</td>
+            <td>syslog</td>
             <td><a href="https://man7.org/linux/man-pages/man2/syslog.2.html">man page</a></td>
             <td>int type</td>
             <td>char *buf</td>
@@ -1311,7 +1311,7 @@
         <tr>
             <td>104</td>
             <td>0x68</td>
-            <td>sys_getgid</td>
+            <td>getgid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getgid.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1323,7 +1323,7 @@
         <tr>
             <td>105</td>
             <td>0x69</td>
-            <td>sys_setuid</td>
+            <td>setuid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setuid.2.html">man page</a></td>
             <td>uid_t uid</td>
             <td>-</td>
@@ -1335,7 +1335,7 @@
         <tr>
             <td>106</td>
             <td>0x6A</td>
-            <td>sys_setgid</td>
+            <td>setgid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setgid.2.html">man page</a></td>
             <td>gid_t gid</td>
             <td>-</td>
@@ -1347,7 +1347,7 @@
         <tr>
             <td>107</td>
             <td>0x6B</td>
-            <td>sys_geteuid</td>
+            <td>geteuid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/geteuid.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1359,7 +1359,7 @@
         <tr>
             <td>108</td>
             <td>0x6C</td>
-            <td>sys_getegid</td>
+            <td>getegid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getegid.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1371,7 +1371,7 @@
         <tr>
             <td>109</td>
             <td>0x6D</td>
-            <td>sys_setpgid</td>
+            <td>setpgid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setpgid.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>pid_t pgid</td>
@@ -1383,7 +1383,7 @@
         <tr>
             <td>110</td>
             <td>0x6E</td>
-            <td>sys_getppid</td>
+            <td>getppid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getppid.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1395,7 +1395,7 @@
         <tr>
             <td>111</td>
             <td>0x6F</td>
-            <td>sys_getpgrp</td>
+            <td>getpgrp</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getpgrp.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1407,7 +1407,7 @@
         <tr>
             <td>112</td>
             <td>0x70</td>
-            <td>sys_setsid</td>
+            <td>setsid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setsid.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1419,7 +1419,7 @@
         <tr>
             <td>113</td>
             <td>0x71</td>
-            <td>sys_setreuid</td>
+            <td>setreuid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setreuid.2.html">man page</a></td>
             <td>uid_t ruid</td>
             <td>uid_t euid</td>
@@ -1431,7 +1431,7 @@
         <tr>
             <td>114</td>
             <td>0x72</td>
-            <td>sys_setregid</td>
+            <td>setregid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setregid.2.html">man page</a></td>
             <td>gid_t rgid</td>
             <td>gid_t egid</td>
@@ -1443,7 +1443,7 @@
         <tr>
             <td>115</td>
             <td>0x73</td>
-            <td>sys_getgroups</td>
+            <td>getgroups</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getgroups.2.html">man page</a></td>
             <td>int gidsetsize</td>
             <td>gid_t *grouplist</td>
@@ -1455,7 +1455,7 @@
         <tr>
             <td>116</td>
             <td>0x74</td>
-            <td>sys_setgroups</td>
+            <td>setgroups</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setgroups.2.html">man page</a></td>
             <td>int gidsetsize</td>
             <td>gid_t *grouplist</td>
@@ -1467,7 +1467,7 @@
         <tr>
             <td>117</td>
             <td>0x75</td>
-            <td>sys_setresuid</td>
+            <td>setresuid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setresuid.2.html">man page</a></td>
             <td>uid_t *ruid</td>
             <td>uid_t *euid</td>
@@ -1479,7 +1479,7 @@
         <tr>
             <td>118</td>
             <td>0x76</td>
-            <td>sys_getresuid</td>
+            <td>getresuid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getresuid.2.html">man page</a></td>
             <td>uid_t *ruid</td>
             <td>uid_t *euid</td>
@@ -1491,7 +1491,7 @@
         <tr>
             <td>119</td>
             <td>0x77</td>
-            <td>sys_setresgid</td>
+            <td>setresgid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setresgid.2.html">man page</a></td>
             <td>gid_t rgid</td>
             <td>gid_t egid</td>
@@ -1503,7 +1503,7 @@
         <tr>
             <td>120</td>
             <td>0x78</td>
-            <td>sys_getresgid</td>
+            <td>getresgid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getresgid.2.html">man page</a></td>
             <td>gid_t *rgid</td>
             <td>gid_t *egid</td>
@@ -1515,7 +1515,7 @@
         <tr>
             <td>121</td>
             <td>0x79</td>
-            <td>sys_getpgid</td>
+            <td>getpgid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getpgid.2.html">man page</a>
             <td>pid_t pid</td>
             <td>-</td>
@@ -1527,7 +1527,7 @@
         <tr>
             <td>122</td>
             <td>0x7A</td>
-            <td>sys_setfsuid</td>
+            <td>setfsuid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setfsuid.2.html">man page</a></td>
             <td>uid_t uid</td>
             <td>-</td>
@@ -1539,7 +1539,7 @@
         <tr>
             <td>123</td>
             <td>0x7B</td>
-            <td>sys_setfsgid</td>
+            <td>setfsgid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setfsgid.2.html">man page</a></td>
             <td>gid_t gid</td>
             <td>-</td>
@@ -1551,7 +1551,7 @@
         <tr>
             <td>124</td>
             <td>0x7C</td>
-            <td>sys_getsid</td>
+            <td>getsid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getsid.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>-</td>
@@ -1563,7 +1563,7 @@
         <tr>
             <td>125</td>
             <td>0x7D</td>
-            <td>sys_capget</td>
+            <td>capget</td>
             <td><a href="https://man7.org/linux/man-pages/man2/capget.2.html">man page</a></td>
             <td>cap_user_header_t header</td>
             <td>cap_user_data_t dataptr</td>
@@ -1575,7 +1575,7 @@
         <tr>
             <td>126</td>
             <td>0x7E</td>
-            <td>sys_capset</td>
+            <td>capset</td>
             <td><a href="https://man7.org/linux/man-pages/man2/capset.2.html">man page</a></td>
             <td>cap_user_header_t header</td>
             <td>const cap_user_data_t data</td>
@@ -1587,7 +1587,7 @@
         <tr>
             <td>127</td>
             <td>0x7F</td>
-            <td>sys_rt_sigpending</td>
+            <td>rt_sigpending</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigpending.2.html">man page</a></td>
             <td>sigset_t *set</td>
             <td>size_t sigsetsize</td>
@@ -1599,7 +1599,7 @@
         <tr>
             <td>128</td>
             <td>0x80</td>
-            <td>sys_rt_sigtimedwait</td>
+            <td>rt_sigtimedwait</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigtimedwait.2.html">man page</a></td>
             <td>const sigset_t *uthese</td>
             <td>siginfo_t *uinfo</td>
@@ -1611,7 +1611,7 @@
         <tr>
             <td>129</td>
             <td>0x81</td>
-            <td>sys_rt_sigqueueinfo</td>
+            <td>rt_sigqueueinfo</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigqueueinfo.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>int sig</td>
@@ -1623,7 +1623,7 @@
         <tr>
             <td>130</td>
             <td>0x82</td>
-            <td>sys_rt_sigsuspend</td>
+            <td>rt_sigsuspend</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigsuspend.2.html">man page</a></td>
             <td>sigset_t *unewset</td>
             <td>size_t sigsetsize</td>
@@ -1635,7 +1635,7 @@
         <tr>
             <td>131</td>
             <td>0x83</td>
-            <td>sys_sigaltstack</td>
+            <td>sigaltstack</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sigaltstack.2.html">man page</a></td>
             <td>const stack_t *uss</td>
             <td>stack_t *uoss</td>
@@ -1647,7 +1647,7 @@
         <tr>
             <td>132</td>
             <td>0x84</td>
-            <td>sys_utime</td>
+            <td>utime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/utime.2.html">man page</a></td>
             <td>char *filename</td>
             <td>struct utimbuf *times</td>
@@ -1659,7 +1659,7 @@
         <tr>
             <td>133</td>
             <td>0x85</td>
-            <td>sys_mknod</td>
+            <td>mknod</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mknod.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>umode_t mode</td>
@@ -1671,7 +1671,7 @@
         <tr>
             <td>134</td>
             <td>0x86</td>
-            <td>sys_uselib</td>
+            <td>uselib</td>
             <td><a href="https://man7.org/linux/man-pages/man2/uselib.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -1683,7 +1683,7 @@
         <tr>
             <td>135</td>
             <td>0x87</td>
-            <td>sys_personality</td>
+            <td>personality</td>
             <td><a href="https://man7.org/linux/man-pages/man2/personality.2.html">man page</a></td>
             <td>unsigned int personality</td>
             <td>-</td>
@@ -1695,7 +1695,7 @@
         <tr>
             <td>136</td>
             <td>0x88</td>
-            <td>sys_ustat</td>
+            <td>ustat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/ustat.2.html">man page</a></td>
             <td>unsigned dev</td>
             <td>struct ustat *ubuf</td>
@@ -1707,7 +1707,7 @@
         <tr>
             <td>137</td>
             <td>0x89</td>
-            <td>sys_statfs</td>
+            <td>statfs</td>
             <td><a href="https://man7.org/linux/man-pages/man2/statfs.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>struct statfs *buf</td>
@@ -1719,7 +1719,7 @@
         <tr>
             <td>138</td>
             <td>0x8A</td>
-            <td>sys_fstatfs</td>
+            <td>fstatfs</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fstatfs.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>struct statfs *buf</td>
@@ -1731,7 +1731,7 @@
         <tr>
             <td>139</td>
             <td>0x8B</td>
-            <td>sys_sysfs</td>
+            <td>sysfs</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sysfs.2.html">man page</a></td>
             <td>int option</td>
             <td>unsigned long arg1</td>
@@ -1743,7 +1743,7 @@
         <tr>
             <td>140</td>
             <td>0x8C</td>
-            <td>sys_getpriority</td>
+            <td>getpriority</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getpriority.2.html">man page</a></td>
             <td>int which</td>
             <td>int who</td>
@@ -1755,7 +1755,7 @@
         <tr>
             <td>141</td>
             <td>0x8D</td>
-            <td>sys_setpriority</td>
+            <td>setpriority</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setpriority.2.html">man page</a></td>
             <td>int which</td>
             <td>int who</td>
@@ -1767,7 +1767,7 @@
         <tr>
             <td>142</td>
             <td>0x8E</td>
-            <td>sys_sched_setparam</td>
+            <td>sched_setparam</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_setparam.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>struct sched_param *param</td>
@@ -1779,7 +1779,7 @@
         <tr>
             <td>143</td>
             <td>0x8F</td>
-            <td>sys_sched_getparam</td>
+            <td>sched_getparam</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_getparam.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>struct sched_param *param</td>
@@ -1791,7 +1791,7 @@
         <tr>
             <td>144</td>
             <td>0x90</td>
-            <td>sys_sched_setscheduler</td>
+            <td>sched_setscheduler</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_setscheduler.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>int policy</td>
@@ -1803,7 +1803,7 @@
         <tr>
             <td>145</td>
             <td>0x91</td>
-            <td>sys_sched_getscheduler</td>
+            <td>sched_getscheduler</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_getscheduler.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>-</td>
@@ -1815,7 +1815,7 @@
         <tr>
             <td>146</td>
             <td>0x92</td>
-            <td>sys_sched_get_priority_max</td>
+            <td>sched_get_priority_max</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_get_priority_max.2.html">man page</a></td>
             <td>int policy</td>
             <td>-</td>
@@ -1827,7 +1827,7 @@
         <tr>
             <td>147</td>
             <td>0x93</td>
-            <td>sys_sched_get_priority_min</td>
+            <td>sched_get_priority_min</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_get_priority_min.2.html">man page</a></td>
             <td>int policy</td>
             <td>-</td>
@@ -1839,7 +1839,7 @@
         <tr>
             <td>148</td>
             <td>0x94</td>
-            <td>sys_sched_rr_get_interval</td>
+            <td>sched_rr_get_interval</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_rr_get_interval.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>struct timespec *interval</td>
@@ -1851,7 +1851,7 @@
         <tr>
             <td>149</td>
             <td>0x95</td>
-            <td>sys_mlock</td>
+            <td>mlock</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mlock.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>size_t len</td>
@@ -1863,7 +1863,7 @@
         <tr>
             <td>150</td>
             <td>0x96</td>
-            <td>sys_munlock</td>
+            <td>munlock</td>
             <td><a href="https://man7.org/linux/man-pages/man2/munlock.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>size_t len</td>
@@ -1875,7 +1875,7 @@
         <tr>
             <td>151</td>
             <td>0x97</td>
-            <td>sys_mlockall</td>
+            <td>mlockall</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mlockall.2.html">man page</a></td>
             <td>int flags</td>
             <td>-</td>
@@ -1887,7 +1887,7 @@
         <tr>
             <td>152</td>
             <td>0x98</td>
-            <td>sys_munlockall</td>
+            <td>munlockall</td>
             <td><a href="https://man7.org/linux/man-pages/man2/munlockall.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1899,7 +1899,7 @@
         <tr>
             <td>153</td>
             <td>0x99</td>
-            <td>sys_vhangup</td>
+            <td>vhangup</td>
             <td><a href="https://man7.org/linux/man-pages/man2/vhangup.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -1911,7 +1911,7 @@
         <tr>
             <td>154</td>
             <td>0x9A</td>
-            <td>sys_modify_ldt</td>
+            <td>modify_ldt</td>
             <td><a href="https://man7.org/linux/man-pages/man2/modify_ldt.2.html">man page</a></td>
             <td>int func</td>
             <td>void *ptr</td>
@@ -1923,7 +1923,7 @@
         <tr>
             <td>155</td>
             <td>0x9B</td>
-            <td>sys_pivot_root</td>
+            <td>pivot_root</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pivot_root.2.html">man page</a></td>
             <td>const char *new_root</td>
             <td>const char *put_old</td>
@@ -1935,7 +1935,7 @@
         <tr>
             <td>156</td>
             <td>0x9C</td>
-            <td>sys__sysctl</td>
+            <td>_sysctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/_sysctl.2.html">man page</a></td>
             <td>struct __sysctl_args *args</td>
             <td>-</td>
@@ -1947,7 +1947,7 @@
         <tr>
             <td>157</td>
             <td>0x9D</td>
-            <td>sys_prctl</td>
+            <td>prctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/prctl.2.html">man page</a></td>
             <td>int option</td>
             <td>unsigned long arg2</td>
@@ -1959,7 +1959,7 @@
         <tr>
             <td>158</td>
             <td>0x9E</td>
-            <td>sys_arch_prctl</td>
+            <td>arch_prctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/arch_prctl.2.html">man page</a></td>
             <td>struct task_struct *task</td>
             <td>int code</td>
@@ -1971,7 +1971,7 @@
         <tr>
             <td>159</td>
             <td>0x9F</td>
-            <td>sys_adjtimex</td>
+            <td>adjtimex</td>
             <td><a href="https://man7.org/linux/man-pages/man2/adjtimex.2.html">man page</a></td>
             <td>struct timex *txc_p</td>
             <td>-</td>
@@ -1983,7 +1983,7 @@
         <tr>
             <td>160</td>
             <td>0xA0</td>
-            <td>sys_setrlimit</td>
+            <td>setrlimit</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setrlimit.2.html">man page</a></td>
             <td>unsigned int resource</td>
             <td>struct rlimit *rlim</td>
@@ -1995,7 +1995,7 @@
         <tr>
             <td>161</td>
             <td>0xA1</td>
-            <td>sys_chroot</td>
+            <td>chroot</td>
             <td><a href="https://man7.org/linux/man-pages/man2/chroot.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>-</td>
@@ -2007,7 +2007,7 @@
         <tr>
             <td>162</td>
             <td>0xA2</td>
-            <td>sys_sync</td>
+            <td>sync</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sync.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -2019,7 +2019,7 @@
         <tr>
             <td>163</td>
             <td>0xA3</td>
-            <td>sys_acct</td>
+            <td>acct</td>
             <td><a href="https://man7.org/linux/man-pages/man2/acct.2.html">man page</a></td>
             <td>const char *name</td>
             <td>-</td>
@@ -2031,7 +2031,7 @@
         <tr>
             <td>164</td>
             <td>0xA4</td>
-            <td>sys_settimeofday</td>
+            <td>settimeofday</td>
             <td><a href="https://man7.org/linux/man-pages/man2/settimeofday.2.html">man page</a></td>
             <td>struct timeval *tv</td>
             <td>struct timezone *tz</td>
@@ -2043,7 +2043,7 @@
         <tr>
             <td>165</td>
             <td>0xA5</td>
-            <td>sys_mount</td>
+            <td>mount</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mount.2.html">man page</a></td>
             <td>char *dev_name</td>
             <td>char *dir_name</td>
@@ -2055,7 +2055,7 @@
         <tr>
             <td>166</td>
             <td>0xA6</td>
-            <td>sys_umount2</td>
+            <td>umount2</td>
             <td><a href="https://man7.org/linux/man-pages/man2/umount2.2.html">man page</a></td>
             <td>const char *target</td>
             <td>int flags</td>
@@ -2067,7 +2067,7 @@
         <tr>
             <td>167</td>
             <td>0xA7</td>
-            <td>sys_swapon</td>
+            <td>swapon</td>
             <td><a href="https://man7.org/linux/man-pages/man2/swapon.2.html">man page</a></td>
             <td>const char *specialfile</td>
             <td>int swap_flags</td>
@@ -2079,7 +2079,7 @@
         <tr>
             <td>168</td>
             <td>0xA8</td>
-            <td>sys_swapoff</td>
+            <td>swapoff</td>
             <td><a href="https://man7.org/linux/man-pages/man2/swapoff.2.html">man page</a></td>
             <td>const char *specialfile</td>
             <td>-</td>
@@ -2091,7 +2091,7 @@
         <tr>
             <td>169</td>
             <td>0xA9</td>
-            <td>sys_reboot</td>
+            <td>reboot</td>
             <td><a href="https://man7.org/linux/man-pages/man2/reboot.2.html">man page</a></td>
             <td>int magic1</td>
             <td>int magic2</td>
@@ -2103,7 +2103,7 @@
         <tr>
             <td>170</td>
             <td>0xAA</td>
-            <td>sys_sethostname</td>
+            <td>sethostname</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sethostname.2.html">man page</a></td>
             <td>char *name</td>
             <td>int len</td>
@@ -2115,7 +2115,7 @@
         <tr>
             <td>171</td>
             <td>0xAB</td>
-            <td>sys_setdomainname</td>
+            <td>setdomainname</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setdomainname.2.html">man page</a></td>
             <td>char *name</td>
             <td>int len</td>
@@ -2127,7 +2127,7 @@
         <tr>
             <td>172</td>
             <td>0xAC</td>
-            <td>sys_iopl</td>
+            <td>iopl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/iopl.2.html">man page</a></td>
             <td>unsigned int level</td>
             <td>struct pt_regs *regs</td>
@@ -2139,7 +2139,7 @@
         <tr>
             <td>173</td>
             <td>0xAD</td>
-            <td>sys_ioperm</td>
+            <td>ioperm</td>
             <td><a href="https://man7.org/linux/man-pages/man2/ioperm.2.html">man page</a></td>
             <td>unsigned long from</td>
             <td>unsigned long num</td>
@@ -2151,7 +2151,7 @@
         <tr>
             <td>174</td>
             <td>0xAE</td>
-            <td>sys_create_module</td>
+            <td>create_module</td>
             <td><a href="https://man7.org/linux/man-pages/man2/create_module.2.html">man page</a></td>
             <td>REMOVED IN Linux 2.6</td>
             <td>-</td>
@@ -2163,7 +2163,7 @@
         <tr>
             <td>175</td>
             <td>0xAF</td>
-            <td>sys_init_module</td>
+            <td>init_module</td>
             <td><a href="https://man7.org/linux/man-pages/man2/init_module.2.html">man page</a></td>
             <td>void *umod</td>
             <td>unsigned long len</td>
@@ -2175,7 +2175,7 @@
         <tr>
             <td>176</td>
             <td>0xB0</td>
-            <td>sys_delete_module</td>
+            <td>delete_module</td>
             <td><a href="https://man7.org/linux/man-pages/man2/delete_module.2.html">man page</a></td>
             <td>const chat *name_user</td>
             <td>unsigned int flags</td>
@@ -2187,7 +2187,7 @@
         <tr>
             <td>177</td>
             <td>0xB1</td>
-            <td>sys_get_kernel_syms</td>
+            <td>get_kernel_syms</td>
             <td><a href="https://man7.org/linux/man-pages/man2/get_kernel_syms.2.html">man page</a></td>
             <td>REMOVED IN Linux 2.6</td>
             <td>-</td>
@@ -2199,7 +2199,7 @@
         <tr>
             <td>178</td>
             <td>0xB2</td>
-            <td>sys_query_module</td>
+            <td>query_module</td>
             <td><a href="https://man7.org/linux/man-pages/man2/query_module.2.html">man page</a></td>
             <td>REMOVED IN Linux 2.6</td>
             <td>-</td>
@@ -2211,7 +2211,7 @@
         <tr>
             <td>179</td>
             <td>0xB3</td>
-            <td>sys_quotactl</td>
+            <td>quotactl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/quotactl.2.html">man page</a></td>
             <td>unsigned int cmd</td>
             <td>const char *special</td>
@@ -2223,7 +2223,7 @@
         <tr>
             <td>180</td>
             <td>0xB4</td>
-            <td>sys_nfsservctl</td>
+            <td>nfsservctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/nfsservctl.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2235,7 +2235,7 @@
         <tr>
             <td>181</td>
             <td>0xB5</td>
-            <td>sys_getpmsg</td>
+            <td>getpmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getpmsg.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2247,7 +2247,7 @@
         <tr>
             <td>182</td>
             <td>0xB6</td>
-            <td>sys_putpmsg</td>
+            <td>putpmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/putpmsg.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2259,7 +2259,7 @@
         <tr>
             <td>183</td>
             <td>0xB7</td>
-            <td>sys_afs_syscall</td>
+            <td>afs_syscall</td>
             <td><a href="https://man7.org/linux/man-pages/man2/afs_syscall.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2271,7 +2271,7 @@
         <tr>
             <td>184</td>
             <td>0xB8</td>
-            <td>sys_tuxcall</td>
+            <td>tuxcall</td>
             <td><a href="https://man7.org/linux/man-pages/man2/tuxcall.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2283,7 +2283,7 @@
         <tr>
             <td>185</td>
             <td>0xB9</td>
-            <td>sys_security</td>
+            <td>security</td>
             <td><a href="https://man7.org/linux/man-pages/man2/security.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2295,7 +2295,7 @@
         <tr>
             <td>186</td>
             <td>0xBA</td>
-            <td>sys_gettid</td>
+            <td>gettid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/gettid.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -2307,7 +2307,7 @@
         <tr>
             <td>187</td>
             <td>0xBB</td>
-            <td>sys_readahead</td>
+            <td>readahead</td>
             <td><a href="https://man7.org/linux/man-pages/man2/readahead.2.html">man page</a></td>
             <td>int fd</td>
             <td>loff_t offset</td>
@@ -2319,7 +2319,7 @@
         <tr>
             <td>188</td>
             <td>0xBC</td>
-            <td>sys_setxattr</td>
+            <td>setxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setxattr.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>const char *name</td>
@@ -2331,7 +2331,7 @@
         <tr>
             <td>189</td>
             <td>0xBD</td>
-            <td>sys_lsetxattr</td>
+            <td>lsetxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lsetxattr.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>const char *name</td>
@@ -2343,7 +2343,7 @@
         <tr>
             <td>190</td>
             <td>0xBE</td>
-            <td>sys_fsetxattr</td>
+            <td>fsetxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fsetxattr.2.html">man page</a></td>
             <td>int fd</td>
             <td>const char *name</td>
@@ -2355,7 +2355,7 @@
         <tr>
             <td>191</td>
             <td>0xBF</td>
-            <td>sys_getxattr</td>
+            <td>getxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getxattr.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>const char *name</td>
@@ -2367,7 +2367,7 @@
         <tr>
             <td>192</td>
             <td>0xC0</td>
-            <td>sys_lgetxattr</td>
+            <td>lgetxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lgetxattr.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>const char *name</td>
@@ -2379,7 +2379,7 @@
         <tr>
             <td>193</td>
             <td>0xC1</td>
-            <td>sys_fgetxattr</td>
+            <td>fgetxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fgetxattr.2.html">man page</a></td>
             <td>int fd</td>
             <td>const har *name</td>
@@ -2391,7 +2391,7 @@
         <tr>
             <td>194</td>
             <td>0xC2</td>
-            <td>sys_listxattr</td>
+            <td>listxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/listxattr.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>char *list</td>
@@ -2403,7 +2403,7 @@
         <tr>
             <td>195</td>
             <td>0xC3</td>
-            <td>sys_llistxattr</td>
+            <td>llistxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/llistxattr.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>char *list</td>
@@ -2415,7 +2415,7 @@
         <tr>
             <td>196</td>
             <td>0xC4</td>
-            <td>sys_flistxattr</td>
+            <td>flistxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/flistxattr.2.html">man page</a></td>
             <td>int fd</td>
             <td>char *list</td>
@@ -2427,7 +2427,7 @@
         <tr>
             <td>197</td>
             <td>0xC5</td>
-            <td>sys_removexattr</td>
+            <td>removexattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/removexattr.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>const char *name</td>
@@ -2439,7 +2439,7 @@
         <tr>
             <td>198</td>
             <td>0xC6</td>
-            <td>sys_lremovexattr</td>
+            <td>lremovexattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lremovexattr.2.html">man page</a></td>
             <td>const char *pathname</td>
             <td>const char *name</td>
@@ -2451,7 +2451,7 @@
         <tr>
             <td>199</td>
             <td>0xC7</td>
-            <td>sys_fremovexattr</td>
+            <td>fremovexattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fremovexattr.2.html">man page</a></td>
             <td>int fd</td>
             <td>const char *name</td>
@@ -2463,7 +2463,7 @@
         <tr>
             <td>200</td>
             <td>0xC8</td>
-            <td>sys_tkill</td>
+            <td>tkill</td>
             <td><a href="https://man7.org/linux/man-pages/man2/tkill.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>ing sig</td>
@@ -2475,7 +2475,7 @@
         <tr>
             <td>201</td>
             <td>0xC9</td>
-            <td>sys_time</td>
+            <td>time</td>
             <td><a href="https://man7.org/linux/man-pages/man2/time.2.html">man page</a></td>
             <td>time_t *tloc</td>
             <td>-</td>
@@ -2487,7 +2487,7 @@
         <tr>
             <td>202</td>
             <td>0xCA</td>
-            <td>sys_futex</td>
+            <td>futex</td>
             <td><a href="https://man7.org/linux/man-pages/man2/futex.2.html">man page</a></td>
             <td>u32 *uaddr</td>
             <td>int op</td>
@@ -2499,7 +2499,7 @@
         <tr>
             <td>203</td>
             <td>0xCB</td>
-            <td>sys_sched_setaffinity</td>
+            <td>sched_setaffinity</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_setaffinity.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>unsigned int len</td>
@@ -2511,7 +2511,7 @@
         <tr>
             <td>204</td>
             <td>0xCC</td>
-            <td>sys_sched_getaffinity</td>
+            <td>sched_getaffinity</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_getaffinity.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>unsigned int len</td>
@@ -2523,7 +2523,7 @@
         <tr>
             <td>205</td>
             <td>0xCD</td>
-            <td>sys_set_thread_area</td>
+            <td>set_thread_area</td>
             <td><a href="https://man7.org/linux/man-pages/man2/set_thread_area.2.html">man page</a></td>
             <td>NOT IMPLEMENTED. Use arch_prctl</td>
             <td>-</td>
@@ -2535,7 +2535,7 @@
         <tr>
             <td>206</td>
             <td>0xCE</td>
-            <td>sys_io_setup</td>
+            <td>io_setup</td>
             <td><a href="https://man7.org/linux/man-pages/man2/io_setup.2.html">man page</a></td>
             <td>unsigned nr_events</td>
             <td>aio_context_t *ctxp</td>
@@ -2547,7 +2547,7 @@
         <tr>
             <td>207</td>
             <td>0xCF</td>
-            <td>sys_io_destroy</td>
+            <td>io_destroy</td>
             <td><a href="https://man7.org/linux/man-pages/man2/io_destroy.2.html">man page</a></td>
             <td>aio_context_t ctx</td>
             <td>-</td>
@@ -2559,7 +2559,7 @@
         <tr>
             <td>208</td>
             <td>0xD0</td>
-            <td>sys_io_getevents</td>
+            <td>io_getevents</td>
             <td><a href="https://man7.org/linux/man-pages/man2/io_getevents.2.html">man page</a></td>
             <td>aio_context_t ctx_id</td>
             <td>long min_nr</td>
@@ -2571,7 +2571,7 @@
         <tr>
             <td>209</td>
             <td>0xD1</td>
-            <td>sys_io_submit</td>
+            <td>io_submit</td>
             <td><a href="https://man7.org/linux/man-pages/man2/io_submit.2.html">man page</a></td>
             <td>aio_context_t ctx_id</td>
             <td>long nr</td>
@@ -2583,7 +2583,7 @@
         <tr>
             <td>210</td>
             <td>0xD2</td>
-            <td>sys_io_cancel</td>
+            <td>io_cancel</td>
             <td><a href="https://man7.org/linux/man-pages/man2/io_cancel.2.html">man page</a></td>
             <td>aio_context_t ctx_id</td>
             <td>struct iocb *iocb</td>
@@ -2595,7 +2595,7 @@
         <tr>
             <td>211</td>
             <td>0xD3</td>
-            <td>sys_get_thread_area</td>
+            <td>get_thread_area</td>
             <td><a href="https://man7.org/linux/man-pages/man2/get_thread_area.2.html">man page</a></td>
             <td>NOT IMPLEMENTED. Use arch_prctl</td>
             <td>-</td>
@@ -2607,7 +2607,7 @@
         <tr>
             <td>212</td>
             <td>0xD4</td>
-            <td>sys_lookup_dcookie</td>
+            <td>lookup_dcookie</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lookup_dcookie.2.html">man page</a></td>
             <td>u64 cookie64</td>
             <td>long buf</td>
@@ -2619,7 +2619,7 @@
         <tr>
             <td>213</td>
             <td>0xD5</td>
-            <td>sys_epoll_create</td>
+            <td>epoll_create</td>
             <td><a href="https://man7.org/linux/man-pages/man2/epoll_create.2.html">man page</a></td>
             <td>int size</td>
             <td>-</td>
@@ -2631,7 +2631,7 @@
         <tr>
             <td>214</td>
             <td>0xD6</td>
-            <td>sys_epoll_ctl_old</td>
+            <td>epoll_ctl_old</td>
             <td><a href="https://man7.org/linux/man-pages/man2/epoll_ctl_old.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2643,7 +2643,7 @@
         <tr>
             <td>215</td>
             <td>0xD7</td>
-            <td>sys_epoll_wait_old</td>
+            <td>epoll_wait_old</td>
             <td><a href="https://man7.org/linux/man-pages/man2/epoll_wait_old.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2655,7 +2655,7 @@
         <tr>
             <td>216</td>
             <td>0xD8</td>
-            <td>sys_remap_file_pages</td>
+            <td>remap_file_pages</td>
             <td><a href="https://man7.org/linux/man-pages/man2/remap_file_pages.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>unsigned long size</td>
@@ -2667,7 +2667,7 @@
         <tr>
             <td>217</td>
             <td>0xD9</td>
-            <td>sys_getdents64</td>
+            <td>getdents64</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getdents64.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>struct linux_dirent64 *dirent</td>
@@ -2679,7 +2679,7 @@
         <tr>
             <td>218</td>
             <td>0xDA</td>
-            <td>sys_set_tid_address</td>
+            <td>set_tid_address</td>
             <td><a href="https://man7.org/linux/man-pages/man2/set_tid_address.2.html">man page</a></td>
             <td>int *tidptr</td>
             <td>-</td>
@@ -2691,7 +2691,7 @@
         <tr>
             <td>219</td>
             <td>0xDB</td>
-            <td>sys_restart_syscall</td>
+            <td>restart_syscall</td>
             <td><a href="https://man7.org/linux/man-pages/man2/restart_syscall.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -2703,7 +2703,7 @@
         <tr>
             <td>220</td>
             <td>0xDC</td>
-            <td>sys_semtimedop</td>
+            <td>semtimedop</td>
             <td><a href="https://man7.org/linux/man-pages/man2/semtimedop.2.html">man page</a></td>
             <td>int semid</td>
             <td>struct sembuf *tsops</td>
@@ -2715,7 +2715,7 @@
         <tr>
             <td>221</td>
             <td>0xDD</td>
-            <td>sys_fadvise64</td>
+            <td>fadvise64</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fadvise64.2.html">man page</a></td>
             <td>int fd</td>
             <td>loff_t offset</td>
@@ -2727,7 +2727,7 @@
         <tr>
             <td>222</td>
             <td>0xDE</td>
-            <td>sys_timer_create</td>
+            <td>timer_create</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timer_create.2.html">man page</a></td>
             <td>const clockid_t which_clock</td>
             <td>struct sigevent *timer_event_spec</td>
@@ -2739,7 +2739,7 @@
         <tr>
             <td>223</td>
             <td>0xDF</td>
-            <td>sys_timer_settime</td>
+            <td>timer_settime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timer_settime.2.html">man page</a></td>
             <td>timer_t timer_id</td>
             <td>int flags</td>
@@ -2751,7 +2751,7 @@
         <tr>
             <td>224</td>
             <td>0xE0</td>
-            <td>sys_timer_gettime</td>
+            <td>timer_gettime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timer_gettime.2.html">man page</a></td>
             <td>timer_t timer_id</td>
             <td>struct itimerspec *setting</td>
@@ -2763,7 +2763,7 @@
         <tr>
             <td>225</td>
             <td>0xE1</td>
-            <td>sys_timer_getoverrun</td>
+            <td>timer_getoverrun</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timer_getoverrun.2.html">man page</a></td>
             <td>timer_t timer_id</td>
             <td>-</td>
@@ -2775,7 +2775,7 @@
         <tr>
             <td>226</td>
             <td>0xE2</td>
-            <td>sys_timer_delete</td>
+            <td>timer_delete</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timer_delete.2.html">man page</a></td>
             <td>timer_t timer_id</td>
             <td>-</td>
@@ -2787,7 +2787,7 @@
         <tr>
             <td>227</td>
             <td>0xE3</td>
-            <td>sys_clock_settime</td>
+            <td>clock_settime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_settime.2.html">man page</a></td>
             <td>const clockid_t which_clock</td>
             <td>const struct timespec *tp</td>
@@ -2799,7 +2799,7 @@
         <tr>
             <td>228</td>
             <td>0xE4</td>
-            <td>sys_clock_gettime</td>
+            <td>clock_gettime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_gettime.2.html">man page</a></td>
             <td>const clockid_t which_clock</td>
             <td>struct timespec *tp</td>
@@ -2811,7 +2811,7 @@
         <tr>
             <td>229</td>
             <td>0xE5</td>
-            <td>sys_clock_getres</td>
+            <td>clock_getres</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_getres.2.html">man page</a></td>
             <td>const clockid_t which_clock</td>
             <td>struct timespec *tp</td>
@@ -2823,7 +2823,7 @@
         <tr>
             <td>230</td>
             <td>0xE6</td>
-            <td>sys_clock_nanosleep</td>
+            <td>clock_nanosleep</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_nanosleep.2.html">man page</a></td>
             <td>const clockid_t which_clock</td>
             <td>int flags</td>
@@ -2835,7 +2835,7 @@
         <tr>
             <td>231</td>
             <td>0xE7</td>
-            <td>sys_exit_group</td>
+            <td>exit_group</td>
             <td><a href="https://man7.org/linux/man-pages/man2/exit_group.2.html">man page</a></td>
             <td>int error_code</td>
             <td>-</td>
@@ -2847,7 +2847,7 @@
         <tr>
             <td>232</td>
             <td>0xE8</td>
-            <td>sys_epoll_wait</td>
+            <td>epoll_wait</td>
             <td><a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">man page</a></td>
             <td>int epfd</td>
             <td>struct epoll_event *events</td>
@@ -2859,7 +2859,7 @@
         <tr>
             <td>233</td>
             <td>0xE9</td>
-            <td>sys_epoll_ctl</td>
+            <td>epoll_ctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">man page</a></td>
             <td>int epfd</td>
             <td>int op</td>
@@ -2871,7 +2871,7 @@
         <tr>
             <td>234</td>
             <td>0xEA</td>
-            <td>sys_tgkill</td>
+            <td>tgkill</td>
             <td><a href="https://man7.org/linux/man-pages/man2/tgkill.2.html">man page</a></td>
             <td>pid_t tgid</td>
             <td>pid_t pid</td>
@@ -2883,7 +2883,7 @@
         <tr>
             <td>235</td>
             <td>0xEB</td>
-            <td>sys_utimes</td>
+            <td>utimes</td>
             <td><a href="https://man7.org/linux/man-pages/man2/futimesat.2.html">man page</a></td>
             <td>char *filename</td>
             <td>struct timeval *utimes</td>
@@ -2895,7 +2895,7 @@
         <tr>
             <td>236</td>
             <td>0xEC</td>
-            <td>sys_vserver</td>
+            <td>vserver</td>
             <td><a href="https://man7.org/linux/man-pages/man2/vserver.2.html">man page</a></td>
             <td>NOT IMPLEMENTED</td>
             <td>-</td>
@@ -2907,7 +2907,7 @@
         <tr>
             <td>237</td>
             <td>0xED</td>
-            <td>sys_mbind</td>
+            <td>mbind</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mbind.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>unsigned long len</td>
@@ -2919,7 +2919,7 @@
         <tr>
             <td>238</td>
             <td>0xEE</td>
-            <td>sys_set_mempolicy</td>
+            <td>set_mempolicy</td>
             <td><a href="https://man7.org/linux/man-pages/man2/set_mempolicy.2.html">man page</a></td>
             <td>int mode</td>
             <td>unsigned long *nmask</td>
@@ -2931,7 +2931,7 @@
         <tr>
             <td>239</td>
             <td>0xEF</td>
-            <td>sys_get_mempolicy</td>
+            <td>get_mempolicy</td>
             <td><a href="https://man7.org/linux/man-pages/man2/get_mempolicy.2.html">man page</a></td>
             <td>int *policy</td>
             <td>unsigned long *nmask</td>
@@ -2943,7 +2943,7 @@
         <tr>
             <td>240</td>
             <td>0xF0</td>
-            <td>sys_mq_open</td>
+            <td>mq_open</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_open.2.html">man page</a></td>
             <td>const char *u_name</td>
             <td>int oflag</td>
@@ -2955,7 +2955,7 @@
         <tr>
             <td>241</td>
             <td>0xF1</td>
-            <td>sys_mq_unlink</td>
+            <td>mq_unlink</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_unlink.2.html">man page</a></td>
             <td>const char *u_name</td>
             <td>-</td>
@@ -2967,7 +2967,7 @@
         <tr>
             <td>242</td>
             <td>0xF2</td>
-            <td>sys_mq_timedsend</td>
+            <td>mq_timedsend</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_timedsend.2.html">man page</a></td>
             <td>mqd_t mqdes</td>
             <td>const char *u_msg_ptr</td>
@@ -2979,7 +2979,7 @@
         <tr>
             <td>243</td>
             <td>0xF3</td>
-            <td>sys_mq_timedreceive</td>
+            <td>mq_timedreceive</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_timedreceive.2.html">man page</a></td>
             <td>mqd_t mqdes</td>
             <td>char *u_msg_ptr</td>
@@ -2991,7 +2991,7 @@
         <tr>
             <td>244</td>
             <td>0xF4</td>
-            <td>sys_mq_notify</td>
+            <td>mq_notify</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_notify.2.html">man page</a></td>
             <td>mqd_t mqdes</td>
             <td>const struct sigevent *u_notification</td>
@@ -3003,7 +3003,7 @@
         <tr>
             <td>245</td>
             <td>0xF5</td>
-            <td>sys_mq_getsetattr</td>
+            <td>mq_getsetattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_getsetattr.2.html">man page</a></td>
             <td>mqd_t mqdes</td>
             <td>const struct mq_attr *u_mqstat</td>
@@ -3015,7 +3015,7 @@
         <tr>
             <td>246</td>
             <td>0xF6</td>
-            <td>sys_kexec_load</td>
+            <td>kexec_load</td>
             <td><a href="https://man7.org/linux/man-pages/man2/kexec_load.2.html">man page</a></td>
             <td>unsigned long entry</td>
             <td>unsigned long nr_segments</td>
@@ -3027,7 +3027,7 @@
         <tr>
             <td>247</td>
             <td>0xF7</td>
-            <td>sys_waitid</td>
+            <td>waitid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/waitid.2.html">man page</a></td>
             <td>int which</td>
             <td>pid_t upid</td>
@@ -3039,7 +3039,7 @@
         <tr>
             <td>248</td>
             <td>0xF8</td>
-            <td>sys_add_key</td>
+            <td>add_key</td>
             <td><a href="https://man7.org/linux/man-pages/man2/add_key.2.html">man page</a></td>
             <td>const char *_type</td>
             <td>const char *_description</td>
@@ -3051,7 +3051,7 @@
         <tr>
             <td>249</td>
             <td>0xF9</td>
-            <td>sys_request_key</td>
+            <td>request_key</td>
             <td><a href="https://man7.org/linux/man-pages/man2/request_key.2.html">man page</a></td>
             <td>const char *_type</td>
             <td>const char *_description</td>
@@ -3063,7 +3063,7 @@
         <tr>
             <td>250</td>
             <td>0xFA</td>
-            <td>sys_keyctl</td>
+            <td>keyctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/keyctl.2.html">man page</a></td>
             <td>int option</td>
             <td>unsigned long arg2</td>
@@ -3075,7 +3075,7 @@
         <tr>
             <td>251</td>
             <td>0xFB</td>
-            <td>sys_ioprio_set</td>
+            <td>ioprio_set</td>
             <td><a href="https://man7.org/linux/man-pages/man2/ioprio_set.2.html">man page</a></td>
             <td>int which</td>
             <td>int who</td>
@@ -3087,7 +3087,7 @@
         <tr>
             <td>252</td>
             <td>0xFC</td>
-            <td>sys_ioprio_get</td>
+            <td>ioprio_get</td>
             <td><a href="https://man7.org/linux/man-pages/man2/ioprio_get.2.html">man page</a></td>
             <td>int which</td>
             <td>int who</td>
@@ -3099,7 +3099,7 @@
         <tr>
             <td>253</td>
             <td>0xFD</td>
-            <td>sys_inotify_init</td>
+            <td>inotify_init</td>
             <td><a href="https://man7.org/linux/man-pages/man2/inotify_init.2.html">man page</a></td>
             <td>-</td>
             <td>-</td>
@@ -3111,7 +3111,7 @@
         <tr>
             <td>254</td>
             <td>0xFE</td>
-            <td>sys_inotify_add_watch</td>
+            <td>inotify_add_watch</td>
             <td><a href="https://man7.org/linux/man-pages/man2/inotify_add_watch.2.html">man page</a></td>
             <td>int fd</td>
             <td>const char *pathname</td>
@@ -3123,7 +3123,7 @@
         <tr>
             <td>255</td>
             <td>0xFF</td>
-            <td>sys_inotify_rm_watch</td>
+            <td>inotify_rm_watch</td>
             <td><a href="https://man7.org/linux/man-pages/man2/inotify_rm_watch.2.html">man page</a></td>
             <td>int fd</td>
             <td>__s32 wd</td>
@@ -3135,7 +3135,7 @@
         <tr>
             <td>256</td>
             <td>0x100</td>
-            <td>sys_migrate_pages</td>
+            <td>migrate_pages</td>
             <td><a href="https://man7.org/linux/man-pages/man2/migrate_pages.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>unsigned long maxnode</td>
@@ -3147,7 +3147,7 @@
         <tr>
             <td>257</td>
             <td>0x101</td>
-            <td>sys_openat</td>
+            <td>openat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/openat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
@@ -3159,7 +3159,7 @@
         <tr>
             <td>258</td>
             <td>0x102</td>
-            <td>sys_mkdirat</td>
+            <td>mkdirat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mkdirat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *pathname</td>
@@ -3171,7 +3171,7 @@
         <tr>
             <td>259</td>
             <td>0x103</td>
-            <td>sys_mknodat</td>
+            <td>mknodat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mknodat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
@@ -3183,7 +3183,7 @@
         <tr>
             <td>260</td>
             <td>0x104</td>
-            <td>sys_fchownat</td>
+            <td>fchownat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fchownat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
@@ -3195,7 +3195,7 @@
         <tr>
             <td>261</td>
             <td>0x105</td>
-            <td>sys_futimesat</td>
+            <td>futimesat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/futimesat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
@@ -3207,7 +3207,7 @@
         <tr>
             <td>262</td>
             <td>0x106</td>
-            <td>sys_newfstatat</td>
+            <td>newfstatat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/newfstatat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
@@ -3219,7 +3219,7 @@
         <tr>
             <td>263</td>
             <td>0x107</td>
-            <td>sys_unlinkat</td>
+            <td>unlinkat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/unlinkat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *pathname</td>
@@ -3231,7 +3231,7 @@
         <tr>
             <td>264</td>
             <td>0x108</td>
-            <td>sys_renameat</td>
+            <td>renameat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/renameat.2.html">man page</a></td>
             <td>int oldfd</td>
             <td>const char *oldname</td>
@@ -3243,7 +3243,7 @@
         <tr>
             <td>265</td>
             <td>0x109</td>
-            <td>sys_linkat</td>
+            <td>linkat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/linkat.2.html">man page</a></td>
             <td>int oldfd</td>
             <td>const char *oldname</td>
@@ -3255,7 +3255,7 @@
         <tr>
             <td>266</td>
             <td>0x10A</td>
-            <td>sys_symlinkat</td>
+            <td>symlinkat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/symlinkat.2.html">man page</a></td>
             <td>const char *oldname</td>
             <td>int newfd</td>
@@ -3267,7 +3267,7 @@
         <tr>
             <td>267</td>
             <td>0x10B</td>
-            <td>sys_readlinkat</td>
+            <td>readlinkat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/readlinkat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *pathname</td>
@@ -3279,7 +3279,7 @@
         <tr>
             <td>268</td>
             <td>0x10C</td>
-            <td>sys_fchmodat</td>
+            <td>fchmodat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fchmodat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
@@ -3291,7 +3291,7 @@
         <tr>
             <td>269</td>
             <td>0x10D</td>
-            <td>sys_faccessat</td>
+            <td>faccessat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/faccessat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
@@ -3303,7 +3303,7 @@
         <tr>
             <td>270</td>
             <td>0x10E</td>
-            <td>sys_pselect6</td>
+            <td>pselect6</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pselect6.2.html">man page</a></td>
             <td>int n</td>
             <td>fd_set *inp</td>
@@ -3315,7 +3315,7 @@
         <tr>
             <td>271</td>
             <td>0x10F</td>
-            <td>sys_ppoll</td>
+            <td>ppoll</td>
             <td><a href="https://man7.org/linux/man-pages/man2/ppoll.2.html">man page</a></td>
             <td>struct pollfd *ufds</td>
             <td>unsigned int nfds</td>
@@ -3327,7 +3327,7 @@
         <tr>
             <td>272</td>
             <td>0x110</td>
-            <td>sys_unshare</td>
+            <td>unshare</td>
             <td><a href="https://man7.org/linux/man-pages/man2/unshare.2.html">man page</a></td>
             <td>unsigned long unshare_flags</td>
             <td>-</td>
@@ -3339,7 +3339,7 @@
         <tr>
             <td>273</td>
             <td>0x111</td>
-            <td>sys_set_robust_list</td>
+            <td>set_robust_list</td>
             <td><a href="https://man7.org/linux/man-pages/man2/set_robust_list.2.html">man page</a></td>
             <td>struct robust_list_head *head</td>
             <td>size_t len</td>
@@ -3351,7 +3351,7 @@
         <tr>
             <td>274</td>
             <td>0x112</td>
-            <td>sys_get_robust_list</td>
+            <td>get_robust_list</td>
             <td><a href="https://man7.org/linux/man-pages/man2/get_robust_list.2.html">man page</a></td>
             <td>int pid</td>
             <td>struct robust_list_head **head_ptr</td>
@@ -3363,7 +3363,7 @@
         <tr>
             <td>275</td>
             <td>0x113</td>
-            <td>sys_splice</td>
+            <td>splice</td>
             <td><a href="https://man7.org/linux/man-pages/man2/splice.2.html">man page</a></td>
             <td>int fd_in</td>
             <td>loff_t *off_in</td>
@@ -3375,7 +3375,7 @@
         <tr>
             <td>276</td>
             <td>0x114</td>
-            <td>sys_tee</td>
+            <td>tee</td>
             <td><a href="https://man7.org/linux/man-pages/man2/tee.2.html">man page</a></td>
             <td>int fdin</td>
             <td>int fdout</td>
@@ -3387,7 +3387,7 @@
         <tr>
             <td>277</td>
             <td>0x115</td>
-            <td>sys_sync_file_range</td>
+            <td>sync_file_range</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sync_file_range.2.html">man page</a></td>
             <td>long fd</td>
             <td>loff_t offset</td>
@@ -3399,7 +3399,7 @@
         <tr>
             <td>278</td>
             <td>0x116</td>
-            <td>sys_vmsplice</td>
+            <td>vmsplice</td>
             <td><a href="https://man7.org/linux/man-pages/man2/vmsplice.2.html">man page</a></td>
             <td>int fd</td>
             <td>const struct iovec *iov</td>
@@ -3411,7 +3411,7 @@
         <tr>
             <td>279</td>
             <td>0x117</td>
-            <td>sys_move_pages</td>
+            <td>move_pages</td>
             <td><a href="https://man7.org/linux/man-pages/man2/move_pages.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>unsigned long nr_pages</td>
@@ -3423,7 +3423,7 @@
         <tr>
             <td>280</td>
             <td>0x118</td>
-            <td>sys_utimensat</td>
+            <td>utimensat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/utimensat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
@@ -3435,7 +3435,7 @@
         <tr>
             <td>281</td>
             <td>0x119</td>
-            <td>sys_epoll_pwait</td>
+            <td>epoll_pwait</td>
             <td><a href="https://man7.org/linux/man-pages/man2/epoll_pwait.2.html">man page</a></td>
             <td>int epfd</td>
             <td>struct epoll_event *events</td>
@@ -3447,7 +3447,7 @@
         <tr>
             <td>282</td>
             <td>0x11A</td>
-            <td>sys_signalfd</td>
+            <td>signalfd</td>
             <td><a href="https://man7.org/linux/man-pages/man2/signalfd.2.html">man page</a></td>
             <td>int ufd</td>
             <td>sigset_t *user_mask</td>
@@ -3459,7 +3459,7 @@
         <tr>
             <td>283</td>
             <td>0x11B</td>
-            <td>sys_timerfd_create</td>
+            <td>timerfd_create</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timerfd_create.2.html">man page</a></td>
             <td>int clockid</td>
             <td>int flags</td>
@@ -3471,7 +3471,7 @@
         <tr>
             <td>284</td>
             <td>0x11C</td>
-            <td>sys_eventfd</td>
+            <td>eventfd</td>
             <td><a href="https://man7.org/linux/man-pages/man2/eventfd.2.html">man page</a></td>
             <td>unsigned int count</td>
             <td>-</td>
@@ -3483,7 +3483,7 @@
         <tr>
             <td>285</td>
             <td>0x11D</td>
-            <td>sys_fallocate</td>
+            <td>fallocate</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fallocate.2.html">man page</a></td>
             <td>long fd</td>
             <td>long mode</td>
@@ -3495,7 +3495,7 @@
         <tr>
             <td>286</td>
             <td>0x11E</td>
-            <td>sys_timerfd_settime</td>
+            <td>timerfd_settime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timerfd_settime.2.html">man page</a></td>
             <td>int ufd</td>
             <td>int flags</td>
@@ -3507,7 +3507,7 @@
         <tr>
             <td>287</td>
             <td>0x11F</td>
-            <td>sys_timerfd_gettime</td>
+            <td>timerfd_gettime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timerfd_gettime.2.html">man page</a></td>
             <td>int ufd</td>
             <td>struct itimerspec *otmr</td>
@@ -3519,7 +3519,7 @@
         <tr>
             <td>288</td>
             <td>0x120</td>
-            <td>sys_accept4</td>
+            <td>accept4</td>
             <td><a href="https://man7.org/linux/man-pages/man2/accept4.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct sockaddr *upeer_sockaddr</td>
@@ -3531,7 +3531,7 @@
         <tr>
             <td>289</td>
             <td>0x121</td>
-            <td>sys_signalfd4</td>
+            <td>signalfd4</td>
             <td><a href="https://man7.org/linux/man-pages/man2/signalfd4.2.html">man page</a></td>
             <td>int ufd</td>
             <td>sigset_t *user_mask</td>
@@ -3543,7 +3543,7 @@
         <tr>
             <td>290</td>
             <td>0x122</td>
-            <td>sys_eventfd2</td>
+            <td>eventfd2</td>
             <td><a href="https://man7.org/linux/man-pages/man2/eventfd2.2.html">man page</a></td>
             <td>unsigned int count</td>
             <td>int flags</td>
@@ -3555,7 +3555,7 @@
         <tr>
             <td>291</td>
             <td>0x123</td>
-            <td>sys_epoll_create1</td>
+            <td>epoll_create1</td>
             <td><a href="https://man7.org/linux/man-pages/man2/epoll_create1.2.html">man page</a></td>
             <td>int flags</td>
             <td>-</td>
@@ -3567,7 +3567,7 @@
         <tr>
             <td>292</td>
             <td>0x124</td>
-            <td>sys_dup3</td>
+            <td>dup3</td>
             <td><a href="https://man7.org/linux/man-pages/man2/dup3.2.html">man page</a></td>
             <td>unsigned int oldfd</td>
             <td>unsigned int newfd</td>
@@ -3579,7 +3579,7 @@
         <tr>
             <td>293</td>
             <td>0x125</td>
-            <td>sys_pipe2</td>
+            <td>pipe2</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pipe2.2.html">man page</a></td>
             <td>int *filedes</td>
             <td>int flags</td>
@@ -3591,7 +3591,7 @@
         <tr>
             <td>294</td>
             <td>0x126</td>
-            <td>sys_inotify_init1</td>
+            <td>inotify_init1</td>
             <td><a href="https://man7.org/linux/man-pages/man2/inotify_init1.2.html">man page</a></td>
             <td>int flags</td>
             <td>-</td>
@@ -3603,7 +3603,7 @@
         <tr>
             <td>295</td>
             <td>0x127</td>
-            <td>sys_preadv</td>
+            <td>preadv</td>
             <td><a href="https://man7.org/linux/man-pages/man2/preadv.2.html">man page</a></td>
             <td>unsigned long fd</td>
             <td>const struct iovec *vec</td>
@@ -3615,7 +3615,7 @@
         <tr>
             <td>296</td>
             <td>0x128</td>
-            <td>sys_pwritev</td>
+            <td>pwritev</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pwritev.2.html">man page</a></td>
             <td>unsigned long fd</td>
             <td>const struct iovec *vec</td>
@@ -3627,7 +3627,7 @@
         <tr>
             <td>297</td>
             <td>0x129</td>
-            <td>sys_rt_tgsigqueueinfo</td>
+            <td>rt_tgsigqueueinfo</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_tgsigqueueinfo.2.html">man page</a></td>
             <td>pid_t tgid</td>
             <td>pid_t pid</td>
@@ -3639,7 +3639,7 @@
         <tr>
             <td>298</td>
             <td>0x12A</td>
-            <td>sys_perf_event_open</td>
+            <td>perf_event_open</td>
             <td><a href="https://man7.org/linux/man-pages/man2/perf_event_open.2.html">man page</a></td>
             <td>struct perf_event_attr *attr_uptr</td>
             <td>pid_t pid</td>
@@ -3651,7 +3651,7 @@
         <tr>
             <td>299</td>
             <td>0x12B</td>
-            <td>sys_recvmmsg</td>
+            <td>recvmmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/recvmmsg.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct msghdr *mmsg</td>
@@ -3663,7 +3663,7 @@
         <tr>
             <td>300</td>
             <td>0x12C</td>
-            <td>sys_fanotify_init</td>
+            <td>fanotify_init</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fanotify_init.2.html">man page</a></td>
             <td>unsigned int flags</td>
             <td>unsigned int event_f_flags</td>
@@ -3675,7 +3675,7 @@
         <tr>
             <td>301</td>
             <td>0x12D</td>
-            <td>sys_fanotify_mark</td>
+            <td>fanotify_mark</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fanotify_mark.2.html">man page</a></td>
             <td>long fanotify_fd</td>
             <td>long flags</td>
@@ -3687,7 +3687,7 @@
         <tr>
             <td>302</td>
             <td>0x12E</td>
-            <td>sys_prlimit64</td>
+            <td>prlimit64</td>
             <td><a href="https://man7.org/linux/man-pages/man2/prlimit64.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>unsigned int resource</td>
@@ -3699,7 +3699,7 @@
         <tr>
             <td>303</td>
             <td>0x12F</td>
-            <td>sys_name_to_handle_at</td>
+            <td>name_to_handle_at</td>
             <td><a href="https://man7.org/linux/man-pages/man2/name_to_handle_at.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *name</td>
@@ -3711,7 +3711,7 @@
         <tr>
             <td>304</td>
             <td>0x130</td>
-            <td>sys_open_by_handle_at</td>
+            <td>open_by_handle_at</td>
             <td><a href="https://man7.org/linux/man-pages/man2/open_by_handle_at.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *name</td>
@@ -3723,7 +3723,7 @@
         <tr>
             <td>305</td>
             <td>0x131</td>
-            <td>sys_clock_adjtime</td>
+            <td>clock_adjtime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_adjtime.2.html">man page</a></td>
             <td>clockid_t which_clock</td>
             <td>struct timex *tx</td>
@@ -3735,7 +3735,7 @@
         <tr>
             <td>306</td>
             <td>0x132</td>
-            <td>sys_syncfs</td>
+            <td>syncfs</td>
             <td><a href="https://man7.org/linux/man-pages/man2/syncfs.2.html">man page</a></td>
             <td>int fd</td>
             <td>-</td>
@@ -3747,7 +3747,7 @@
         <tr>
             <td>307</td>
             <td>0x133</td>
-            <td>sys_sendmmsg</td>
+            <td>sendmmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sendmmsg.2.html">man page</a></td>
             <td>int fd</td>
             <td>struct mmsghdr *mmsg</td>
@@ -3759,7 +3759,7 @@
         <tr>
             <td>308</td>
             <td>0x134</td>
-            <td>sys_setns</td>
+            <td>setns</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setns.2.html">man page</a></td>
             <td>int fd</td>
             <td>int nstype</td>
@@ -3771,7 +3771,7 @@
         <tr>
             <td>309</td>
             <td>0x135</td>
-            <td>sys_getcpu</td>
+            <td>getcpu</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getcpu.2.html">man page</a></td>
             <td>unsigned *cpup</td>
             <td>unsigned *nodep</td>
@@ -3783,7 +3783,7 @@
         <tr>
             <td>310</td>
             <td>0x136</td>
-            <td>sys_process_vm_readv</td>
+            <td>process_vm_readv</td>
             <td><a href="https://man7.org/linux/man-pages/man2/process_vm_readv.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>const struct iovec *lvec</td>
@@ -3795,7 +3795,7 @@
         <tr>
             <td>311</td>
             <td>0x137</td>
-            <td>sys_process_vm_writev</td>
+            <td>process_vm_writev</td>
             <td><a href="https://man7.org/linux/man-pages/man2/process_vm_writev.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>const struct iovec *lvec</td>
@@ -3807,7 +3807,7 @@
         <tr>
             <td>312</td>
             <td>0x138</td>
-            <td>sys_kcmp</td>
+            <td>kcmp</td>
             <td><a href="https://man7.org/linux/man-pages/man2/kcmp.2.html">man page</a></td>
             <td>pid_t pid1</td>
             <td>pid_t pid2</td>
@@ -3819,7 +3819,7 @@
         <tr>
             <td>313</td>
             <td>0x139</td>
-            <td>sys_finit_module</td>
+            <td>finit_module</td>
             <td><a href="https://man7.org/linux/man-pages/man2/finit_module.2.html">man page</a></td>
             <td>int fd</td>
             <td>const char __user *uargs</td>
@@ -3831,7 +3831,7 @@
         <tr>
             <td>314</td>
             <td>0x13A</td>
-            <td>sys_sched_setattr</td>
+            <td>sched_setattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_setattr.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>struct sched_attr __user *attr</td>
@@ -3843,7 +3843,7 @@
         <tr>
             <td>315</td>
             <td>0x13B</td>
-            <td>sys_sched_getattr</td>
+            <td>sched_getattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_getattr.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>struct sched_attr __user *attr</td>
@@ -3855,7 +3855,7 @@
         <tr>
             <td>316</td>
             <td>0x13C</td>
-            <td>sys_renameat2</td>
+            <td>renameat2</td>
             <td><a href="https://man7.org/linux/man-pages/man2/renameat2.2.html">man page</a></td>
             <td>int olddfd</td>
             <td>const char __user *oldname</td>
@@ -3867,7 +3867,7 @@
         <tr>
             <td>317</td>
             <td>0x13D</td>
-            <td>sys_seccomp</td>
+            <td>seccomp</td>
             <td><a href="https://man7.org/linux/man-pages/man2/seccomp.2.html">man page</a></td>
             <td>unsigned int op</td>
             <td>unsigned int flags</td>
@@ -3879,7 +3879,7 @@
         <tr>
             <td>318</td>
             <td>0x13E</td>
-            <td>sys_getrandom</td>
+            <td>getrandom</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getrandom.2.html">man page</a></td>
             <td>char __user *buf</td>
             <td>size_t count</td>
@@ -3891,7 +3891,7 @@
         <tr>
             <td>319</td>
             <td>0x13F</td>
-            <td>sys_memfd_create</td>
+            <td>memfd_create</td>
             <td><a href="https://man7.org/linux/man-pages/man2/memfd_create.2.html">man page</a></td>
             <td>const char __user *uname_ptr</td>
             <td>unsigned
@@ -3905,7 +3905,7 @@
         <tr>
             <td>320</td>
             <td>0x140</td>
-            <td>sys_kexec_file_load</td>
+            <td>kexec_file_load</td>
             <td><a href="https://man7.org/linux/man-pages/man2/kexec_file_load.2.html">man page</a></td>
             <td>int kernel_fd</td>
             <td>int initrd_fd</td>
@@ -3917,7 +3917,7 @@
         <tr>
             <td>321</td>
             <td>0x141</td>
-            <td>sys_bpf</td>
+            <td>bpf</td>
             <td><a href="https://man7.org/linux/man-pages/man2/bpf.2.html">man page</a></td>
             <td>int cmd</td>
             <td>union bpf_attr *attr</td>
