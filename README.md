@@ -1,4 +1,7 @@
-# insecure-cpp.github.io
+# (In)Secure C++ Public Course Resources
+
+4-day course: https://turtlesec.no/blog/insecure-cpp/
+2-day course: https://turtlesec.no/blog/insecure-cpp-sec-edition/
 
 ## x86_64
 
