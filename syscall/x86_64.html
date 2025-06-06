@@ -91,7 +91,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/open.2.html">man page</a></td>
             <td>const char *filename</td>
             <td>int flags</td>
-            <td>int mode</td>
+            <td>umode_t mode</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -114,7 +114,7 @@
             <td>stat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/stat.2.html">man page</a></td>
             <td>const char *filename</td>
-            <td>struct stat *statbuf</td>
+            <td>struct __old_kernel_stat *statbuf</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -126,7 +126,7 @@
             <td>fstat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fstat.2.html">man page</a></td>
             <td>unsigned int fd</td>
-            <td>struct stat *statbuf</td>
+            <td>struct __old_kernel_stat *statbuf</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -137,8 +137,8 @@
             <td>0x6</td>
             <td>lstat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lstat.2.html">man page</a></td>
-            <td>fconst char *filename</td>
-            <td>struct stat *statbuf</td>
+            <td>const char *filename</td>
+            <td>struct __old_kernel_stat *statbuf</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -149,9 +149,9 @@
             <td>0x7</td>
             <td>poll</td>
             <td><a href="https://man7.org/linux/man-pages/man2/poll.2.html">man page</a></td>
-            <td>struct poll_fd *ufds</td>
+            <td>struct pollfd *ufds</td>
             <td>unsigned int nfds</td>
-            <td>long timeout_msecs</td>
+            <td>int timeout</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -163,7 +163,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/lseek.2.html">man page</a></td>
             <td>unsigned int fd</td>
             <td>off_t offset</td>
-            <td>unsigned int origin</td>
+            <td>unsigned int whence</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -234,7 +234,7 @@
             <td>rt_sigprocmask</td>
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigprocmask.2.html">man page</a></td>
             <td>int how</td>
-            <td>sigset_t *nset</td>
+            <td>sigset_t *set</td>
             <td>sigset_t *oset</td>
             <td>size_t sigsetsize</td>
             <td>-</td>
@@ -269,7 +269,7 @@
             <td>0x11</td>
             <td>pread64</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pread64.2.html">man page</a></td>
-            <td>unsigned long fd</td>
+            <td>unsigned int fd</td>
             <td>char *buf</td>
             <td>size_t count</td>
             <td>loff_t pos</td>
@@ -329,7 +329,7 @@
             <td>0x16</td>
             <td>pipe</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pipe.2.html">man page</a></td>
-            <td>int *filedes</td>
+            <td>int *fildes</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -344,7 +344,7 @@
             <td>int n</td>
             <td>fd_set *inp</td>
             <td>fd_set *outp</td>
-            <td>fd_set*exp</td>
+            <td>fd_set *exp</td>
             <td>struct timeval *tvp</td>
             <td>-</td>
         </tr>
@@ -391,7 +391,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/mincore.2.html">man page</a></td>
             <td>unsigned long start</td>
             <td>size_t len</td>
-            <td>unsigned char *vec</td>
+            <td>unsigned char * vec</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -402,7 +402,7 @@
             <td>madvise</td>
             <td><a href="https://man7.org/linux/man-pages/man2/madvise.2.html">man page</a></td>
             <td>unsigned long start</td>
-            <td>size_t len_in</td>
+            <td>size_t len</td>
             <td>int behavior</td>
             <td>-</td>
             <td>-</td>
@@ -415,7 +415,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/shmget.2.html">man page</a></td>
             <td>key_t key</td>
             <td>size_t size</td>
-            <td>int shmflg</td>
+            <td>int flag</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -485,8 +485,8 @@
             <td>0x23</td>
             <td>nanosleep</td>
             <td><a href="https://man7.org/linux/man-pages/man2/nanosleep.2.html">man page</a></td>
-            <td>struct timespec *rqtp</td>
-            <td>struct timespec *rmtp</td>
+            <td>struct __kernel_timespec *rqtp</td>
+            <td>struct __kernel_timespec *rmtp</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -618,7 +618,7 @@
             <td>sendmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sendmsg.2.html">man page</a></td>
             <td>int fd</td>
-            <td>struct msghdr *msg</td>
+            <td>struct user_msghdr *msg</td>
             <td>unsigned flags</td>
             <td>-</td>
             <td>-</td>
@@ -630,8 +630,8 @@
             <td>recvmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/recvmsg.2.html">man page</a></td>
             <td>int fd</td>
-            <td>struct msghdr *msg</td>
-            <td>unsigned int flags</td>
+            <td>struct user_msghdr *msg</td>
+            <td>unsigned flags</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -739,8 +739,8 @@
             <td><a href="https://man7.org/linux/man-pages/man2/clone.2.html">man page</a></td>
             <td>unsigned long clone_flags</td>
             <td>unsigned long newsp</td>
-            <td>void *parent_tid</td>
-            <td>void *child_tid</td>
+            <td>int *parent_tid</td>
+            <td>int *child_tid</td>
             <td>unsigned int tid</td>
             <td>-</td>
         </tr>
@@ -774,8 +774,8 @@
             <td>execve</td>
             <td><a href="https://man7.org/linux/man-pages/man2/execve.2.html">man page</a></td>
             <td>const char *filename</td>
-            <td>const char *const argv[]</td>
-            <td>const char *const envp[]</td>
+            <td>const char *const *argv</td>
+            <td>const char *const *envp</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -797,7 +797,7 @@
             <td>0x3D</td>
             <td>wait4</td>
             <td><a href="https://man7.org/linux/man-pages/man2/wait4.2.html">man page</a></td>
-            <td>pid_t upid</td>
+            <td>pid_t pid</td>
             <td>int *stat_addr</td>
             <td>int options</td>
             <td>struct rusage *ru</td>
@@ -846,7 +846,7 @@
             <td>semop</td>
             <td><a href="https://man7.org/linux/man-pages/man2/semop.2.html">man page</a></td>
             <td>int semid</td>
-            <td>struct sembuf *tsops</td>
+            <td>struct sembuf *sops</td>
             <td>unsigned nsops</td>
             <td>-</td>
             <td>-</td>
@@ -1062,7 +1062,7 @@
             <td>mkdir</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mkdir.2.html">man page</a></td>
             <td>const char *pathname</td>
-            <td>int mode</td>
+            <td>umode_t mode</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1086,7 +1086,7 @@
             <td>creat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/creat.2.html">man page</a></td>
             <td>const char *pathname</td>
-            <td>int mode</td>
+            <td>umode_t mode</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1121,8 +1121,8 @@
             <td>0x58</td>
             <td>symlink</td>
             <td><a href="https://man7.org/linux/man-pages/man2/symlink.2.html">man page</a></td>
-            <td>const char *oldname</td>
-            <td>const char *newname</td>
+            <td>const char *old</td>
+            <td>const char *new</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1146,7 +1146,7 @@
             <td>chmod</td>
             <td><a href="https://man7.org/linux/man-pages/man2/chmod.2.html">man page</a></td>
             <td>const char *filename</td>
-            <td>mode_t mode</td>
+            <td>umode_t mode</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1158,7 +1158,7 @@
             <td>fchmod</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fchmod.2.html">man page</a></td>
             <td>unsigned int fd</td>
-            <td>mode_t mode</td>
+            <td>umode_t mode</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1469,9 +1469,9 @@
             <td>0x75</td>
             <td>setresuid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setresuid.2.html">man page</a></td>
-            <td>uid_t *ruid</td>
-            <td>uid_t *euid</td>
-            <td>uid_t *suid</td>
+            <td>uid_t ruid</td>
+            <td>uid_t euid</td>
+            <td>uid_t suid</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1603,7 +1603,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/rt_sigtimedwait.2.html">man page</a></td>
             <td>const sigset_t *uthese</td>
             <td>siginfo_t *uinfo</td>
-            <td>const struct timespec *uts</td>
+            <td>const struct __kernel_timespec *uts</td>
             <td>size_t sigsetsize</td>
             <td>-</td>
             <td>-</td>
@@ -1673,7 +1673,7 @@
             <td>0x86</td>
             <td>uselib</td>
             <td><a href="https://man7.org/linux/man-pages/man2/uselib.2.html">man page</a></td>
-            <td>NOT IMPLEMENTED</td>
+            <td>const char *library</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1709,7 +1709,7 @@
             <td>0x89</td>
             <td>statfs</td>
             <td><a href="https://man7.org/linux/man-pages/man2/statfs.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char * path</td>
             <td>struct statfs *buf</td>
             <td>-</td>
             <td>-</td>
@@ -1842,7 +1842,7 @@
             <td>sched_rr_get_interval</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_rr_get_interval.2.html">man page</a></td>
             <td>pid_t pid</td>
-            <td>struct timespec *interval</td>
+            <td>struct __kernel_timespec *interval</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1973,7 +1973,7 @@
             <td>0x9F</td>
             <td>adjtimex</td>
             <td><a href="https://man7.org/linux/man-pages/man2/adjtimex.2.html">man page</a></td>
-            <td>struct timex *txc_p</td>
+            <td>struct __kernel_timex *txc_p</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2177,7 +2177,7 @@
             <td>0xB0</td>
             <td>delete_module</td>
             <td><a href="https://man7.org/linux/man-pages/man2/delete_module.2.html">man page</a></td>
-            <td>const chat *name_user</td>
+            <td>const char *name_user</td>
             <td>unsigned int flags</td>
             <td>-</td>
             <td>-</td>
@@ -2321,7 +2321,7 @@
             <td>0xBC</td>
             <td>setxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/setxattr.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>const char *name</td>
             <td>const void *value</td>
             <td>size_t size</td>
@@ -2333,7 +2333,7 @@
             <td>0xBD</td>
             <td>lsetxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lsetxattr.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>const char *name</td>
             <td>const void *value</td>
             <td>size_t size</td>
@@ -2357,7 +2357,7 @@
             <td>0xBF</td>
             <td>getxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getxattr.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>const char *name</td>
             <td>void *value</td>
             <td>size_t size</td>
@@ -2369,7 +2369,7 @@
             <td>0xC0</td>
             <td>lgetxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lgetxattr.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>const char *name</td>
             <td>void *value</td>
             <td>size_t size</td>
@@ -2382,7 +2382,7 @@
             <td>fgetxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fgetxattr.2.html">man page</a></td>
             <td>int fd</td>
-            <td>const har *name</td>
+            <td>const char *name</td>
             <td>void *value</td>
             <td>size_t size</td>
             <td>-</td>
@@ -2393,7 +2393,7 @@
             <td>0xC2</td>
             <td>listxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/listxattr.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>char *list</td>
             <td>size_t size</td>
             <td>-</td>
@@ -2405,7 +2405,7 @@
             <td>0xC3</td>
             <td>llistxattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/llistxattr.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>char *list</td>
             <td>size_t size</td>
             <td>-</td>
@@ -2429,7 +2429,7 @@
             <td>0xC5</td>
             <td>removexattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/removexattr.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>const char *name</td>
             <td>-</td>
             <td>-</td>
@@ -2441,7 +2441,7 @@
             <td>0xC6</td>
             <td>lremovexattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lremovexattr.2.html">man page</a></td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>const char *name</td>
             <td>-</td>
             <td>-</td>
@@ -2466,7 +2466,7 @@
             <td>tkill</td>
             <td><a href="https://man7.org/linux/man-pages/man2/tkill.2.html">man page</a></td>
             <td>pid_t pid</td>
-            <td>ing sig</td>
+            <td>int sig</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2492,7 +2492,7 @@
             <td>u32 *uaddr</td>
             <td>int op</td>
             <td>u32 val</td>
-            <td>struct timespec *utime</td>
+            <td>struct __kernel_timespec *utime</td>
             <td>u32 *uaddr2</td>
             <td>u32 val3</td>
         </tr>
@@ -2537,8 +2537,8 @@
             <td>0xCE</td>
             <td>io_setup</td>
             <td><a href="https://man7.org/linux/man-pages/man2/io_setup.2.html">man page</a></td>
-            <td>unsigned nr_events</td>
-            <td>aio_context_t *ctxp</td>
+            <td>unsigned nr_reqs</td>
+            <td>aio_context_t *ctx</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2565,7 +2565,7 @@
             <td>long min_nr</td>
             <td>long nr</td>
             <td>struct io_event *events</td>
-            <td>-</td>
+            <td>struct __kernel_timespec *timeout</td>
             <td>-</td>
         </tr>
         <tr>
@@ -2610,8 +2610,8 @@
             <td>lookup_dcookie</td>
             <td><a href="https://man7.org/linux/man-pages/man2/lookup_dcookie.2.html">man page</a></td>
             <td>u64 cookie64</td>
-            <td>long buf</td>
-            <td>long len</td>
+            <td>char *buf</td>
+            <td>size_t len</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2706,9 +2706,9 @@
             <td>semtimedop</td>
             <td><a href="https://man7.org/linux/man-pages/man2/semtimedop.2.html">man page</a></td>
             <td>int semid</td>
-            <td>struct sembuf *tsops</td>
+            <td>struct sembuf *sops</td>
             <td>unsigned nsops</td>
-            <td>const struct timespec *timeout</td>
+            <td>const struct __kernel_timespec *timeout</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -2729,9 +2729,9 @@
             <td>0xDE</td>
             <td>timer_create</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timer_create.2.html">man page</a></td>
-            <td>const clockid_t which_clock</td>
+            <td>clockid_t which_clock</td>
             <td>struct sigevent *timer_event_spec</td>
-            <td>timer_t *created_timer_id</td>
+            <td>timer_t * created_timer_id</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2743,8 +2743,8 @@
             <td><a href="https://man7.org/linux/man-pages/man2/timer_settime.2.html">man page</a></td>
             <td>timer_t timer_id</td>
             <td>int flags</td>
-            <td>const struct itimerspec *new_setting</td>
-            <td>struct itimerspec *old_setting</td>
+            <td>const struct __kernel_itimerspec *new_setting</td>
+            <td>struct __kernel_itimerspec *old_setting</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -2754,7 +2754,7 @@
             <td>timer_gettime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timer_gettime.2.html">man page</a></td>
             <td>timer_t timer_id</td>
-            <td>struct itimerspec *setting</td>
+            <td>struct __kernel_itimerspec *setting</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2789,8 +2789,8 @@
             <td>0xE3</td>
             <td>clock_settime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_settime.2.html">man page</a></td>
-            <td>const clockid_t which_clock</td>
-            <td>const struct timespec *tp</td>
+            <td>clockid_t which_clock</td>
+            <td>const struct __kernel_timespec *tp</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2801,8 +2801,8 @@
             <td>0xE4</td>
             <td>clock_gettime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_gettime.2.html">man page</a></td>
-            <td>const clockid_t which_clock</td>
-            <td>struct timespec *tp</td>
+            <td>clockid_t which_clock</td>
+            <td>struct __kernel_timespec *tp</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2813,8 +2813,8 @@
             <td>0xE5</td>
             <td>clock_getres</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_getres.2.html">man page</a></td>
-            <td>const clockid_t which_clock</td>
-            <td>struct timespec *tp</td>
+            <td>clockid_t which_clock</td>
+            <td>struct __kernel_timespec *tp</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2825,10 +2825,10 @@
             <td>0xE6</td>
             <td>clock_nanosleep</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_nanosleep.2.html">man page</a></td>
-            <td>const clockid_t which_clock</td>
+            <td>clockid_t which_clock</td>
             <td>int flags</td>
-            <td>const struct timespec *rqtp</td>
-            <td>struct timespec *rmtp</td>
+            <td>const struct __kernel_timespec *rqtp</td>
+            <td>struct __kernel_timespec *rmtp</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -2912,7 +2912,7 @@
             <td>unsigned long start</td>
             <td>unsigned long len</td>
             <td>unsigned long mode</td>
-            <td>unsigned long *nmask</td>
+            <td>const unsigned long *nmask</td>
             <td>unsigned long maxnode</td>
             <td>unsigned flags</td>
         </tr>
@@ -2922,7 +2922,7 @@
             <td>set_mempolicy</td>
             <td><a href="https://man7.org/linux/man-pages/man2/set_mempolicy.2.html">man page</a></td>
             <td>int mode</td>
-            <td>unsigned long *nmask</td>
+            <td>const unsigned long *nmask</td>
             <td>unsigned long maxnode</td>
             <td>-</td>
             <td>-</td>
@@ -2945,10 +2945,10 @@
             <td>0xF0</td>
             <td>mq_open</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_open.2.html">man page</a></td>
-            <td>const char *u_name</td>
+            <td>const char *name</td>
             <td>int oflag</td>
-            <td>mode_t mode</td>
-            <td>struct mq_attr *u_attr</td>
+            <td>umode_t mode</td>
+            <td>struct mq_attr *attr</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -2957,7 +2957,7 @@
             <td>0xF1</td>
             <td>mq_unlink</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_unlink.2.html">man page</a></td>
-            <td>const char *u_name</td>
+            <td>const char *name</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -2970,10 +2970,10 @@
             <td>mq_timedsend</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_timedsend.2.html">man page</a></td>
             <td>mqd_t mqdes</td>
-            <td>const char *u_msg_ptr</td>
+            <td>const char *msg_ptr</td>
             <td>size_t msg_len</td>
             <td>unsigned int msg_prio</td>
-            <td>const stuct timespec *u_abs_timeout</td>
+            <td>const struct __kernel_timespec *abs_timeout</td>
             <td>-</td>
         </tr>
         <tr>
@@ -2982,10 +2982,10 @@
             <td>mq_timedreceive</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_timedreceive.2.html">man page</a></td>
             <td>mqd_t mqdes</td>
-            <td>char *u_msg_ptr</td>
+            <td>char *msg_ptr</td>
             <td>size_t msg_len</td>
-            <td>unsigned int *u_msg_prio</td>
-            <td>const struct timespec *u_abs_timeout</td>
+            <td>unsigned int *msg_prio</td>
+            <td>const struct __kernel_timespec *abs_timeout</td>
             <td>-</td>
         </tr>
         <tr>
@@ -2994,7 +2994,7 @@
             <td>mq_notify</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_notify.2.html">man page</a></td>
             <td>mqd_t mqdes</td>
-            <td>const struct sigevent *u_notification</td>
+            <td>const struct sigevent *notification</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3006,8 +3006,8 @@
             <td>mq_getsetattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mq_getsetattr.2.html">man page</a></td>
             <td>mqd_t mqdes</td>
-            <td>const struct mq_attr *u_mqstat</td>
-            <td>struct mq_attr *u_omqstat</td>
+            <td>const struct mq_attr *mqstat</td>
+            <td>struct mq_attr *omqstat</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3030,7 +3030,7 @@
             <td>waitid</td>
             <td><a href="https://man7.org/linux/man-pages/man2/waitid.2.html">man page</a></td>
             <td>int which</td>
-            <td>pid_t upid</td>
+            <td>pid_t pid</td>
             <td>struct siginfo *infop</td>
             <td>int options</td>
             <td>struct rusage *ru</td>
@@ -3045,7 +3045,7 @@
             <td>const char *_description</td>
             <td>const void *_payload</td>
             <td>size_t plen</td>
-            <td>-</td>
+            <td>key_serial_t destringid</td>
             <td>-</td>
         </tr>
         <tr>
@@ -3065,7 +3065,7 @@
             <td>0xFA</td>
             <td>keyctl</td>
             <td><a href="https://man7.org/linux/man-pages/man2/keyctl.2.html">man page</a></td>
-            <td>int option</td>
+            <td>int cmd</td>
             <td>unsigned long arg2</td>
             <td>unsigned long arg3</td>
             <td>unsigned long arg4</td>
@@ -3114,7 +3114,7 @@
             <td>inotify_add_watch</td>
             <td><a href="https://man7.org/linux/man-pages/man2/inotify_add_watch.2.html">man page</a></td>
             <td>int fd</td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>u32 mask</td>
             <td>-</td>
             <td>-</td>
@@ -3139,8 +3139,8 @@
             <td><a href="https://man7.org/linux/man-pages/man2/migrate_pages.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>unsigned long maxnode</td>
-            <td>const unsigned long *old_nodes</td>
-            <td>const unsigned long *new_nodes</td>
+            <td>const unsigned long *from</td>
+            <td>const unsigned long *to</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -3152,7 +3152,7 @@
             <td>int dfd</td>
             <td>const char *filename</td>
             <td>int flags</td>
-            <td>int mode</td>
+            <td>umode_t mode</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -3162,8 +3162,8 @@
             <td>mkdirat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mkdirat.2.html">man page</a></td>
             <td>int dfd</td>
-            <td>const char *pathname</td>
-            <td>int mode</td>
+            <td>const char * pathname</td>
+            <td>umode_t mode</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3174,8 +3174,8 @@
             <td>mknodat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/mknodat.2.html">man page</a></td>
             <td>int dfd</td>
-            <td>const char *filename</td>
-            <td>int mode</td>
+            <td>const char * filename</td>
+            <td>umode_t mode</td>
             <td>unsigned dev</td>
             <td>-</td>
             <td>-</td>
@@ -3222,7 +3222,7 @@
             <td>unlinkat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/unlinkat.2.html">man page</a></td>
             <td>int dfd</td>
-            <td>const char *pathname</td>
+            <td>const char * pathname</td>
             <td>int flag</td>
             <td>-</td>
             <td>-</td>
@@ -3233,10 +3233,10 @@
             <td>0x108</td>
             <td>renameat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/renameat.2.html">man page</a></td>
-            <td>int oldfd</td>
-            <td>const char *oldname</td>
-            <td>int newfd</td>
-            <td>const char *newname</td>
+            <td>int olddfd</td>
+            <td>const char * oldname</td>
+            <td>int newdfd</td>
+            <td>const char * newname</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -3245,9 +3245,9 @@
             <td>0x109</td>
             <td>linkat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/linkat.2.html">man page</a></td>
-            <td>int oldfd</td>
+            <td>int olddfd</td>
             <td>const char *oldname</td>
-            <td>int newfd</td>
+            <td>int newdfd</td>
             <td>const char *newname</td>
             <td>int flags</td>
             <td>-</td>
@@ -3257,9 +3257,9 @@
             <td>0x10A</td>
             <td>symlinkat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/symlinkat.2.html">man page</a></td>
-            <td>const char *oldname</td>
-            <td>int newfd</td>
-            <td>const char *newname</td>
+            <td>const char * oldname</td>
+            <td>int newdfd</td>
+            <td>const char * newname</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3270,7 +3270,7 @@
             <td>readlinkat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/readlinkat.2.html">man page</a></td>
             <td>int dfd</td>
-            <td>const char *pathname</td>
+            <td>const char *path</td>
             <td>char *buf</td>
             <td>int bufsiz</td>
             <td>-</td>
@@ -3282,8 +3282,8 @@
             <td>fchmodat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fchmodat.2.html">man page</a></td>
             <td>int dfd</td>
-            <td>const char *filename</td>
-            <td>mode_t mode</td>
+            <td>const char * filename</td>
+            <td>umode_t mode</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3309,7 +3309,7 @@
             <td>fd_set *inp</td>
             <td>fd_set *outp</td>
             <td>fd_set *exp</td>
-            <td>struct timespec *tsp</td>
+            <td>struct __kernel_timespec *tsp</td>
             <td>void *sig</td>
         </tr>
         <tr>
@@ -3319,7 +3319,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/ppoll.2.html">man page</a></td>
             <td>struct pollfd *ufds</td>
             <td>unsigned int nfds</td>
-            <td>struct timespec *tsp</td>
+            <td>struct __kernel_timespec *tsp</td>
             <td>const sigset_t *sigmask</td>
             <td>size_t sigsetsize</td>
             <td>-</td>
@@ -3354,7 +3354,7 @@
             <td>get_robust_list</td>
             <td><a href="https://man7.org/linux/man-pages/man2/get_robust_list.2.html">man page</a></td>
             <td>int pid</td>
-            <td>struct robust_list_head **head_ptr</td>
+            <td>struct robust_list_head * *head_ptr</td>
             <td>size_t *len_ptr</td>
             <td>-</td>
             <td>-</td>
@@ -3391,8 +3391,8 @@
             <td><a href="https://man7.org/linux/man-pages/man2/sync_file_range.2.html">man page</a></td>
             <td>long fd</td>
             <td>loff_t offset</td>
-            <td>loff_t bytes</td>
-            <td>long flags</td>
+            <td>loff_t nbytes</td>
+            <td>unsigned int flags</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -3415,7 +3415,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/move_pages.2.html">man page</a></td>
             <td>pid_t pid</td>
             <td>unsigned long nr_pages</td>
-            <td>const void **pages</td>
+            <td>const void * *pages</td>
             <td>const int *nodes</td>
             <td>int *status</td>
             <td>int flags</td>
@@ -3427,7 +3427,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/utimensat.2.html">man page</a></td>
             <td>int dfd</td>
             <td>const char *filename</td>
-            <td>struct timespec *utimes</td>
+            <td>struct __kernel_timespec *utimes</td>
             <td>int flags</td>
             <td>-</td>
             <td>-</td>
@@ -3485,8 +3485,8 @@
             <td>0x11D</td>
             <td>fallocate</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fallocate.2.html">man page</a></td>
-            <td>long fd</td>
-            <td>long mode</td>
+            <td>int fd</td>
+            <td>int mode</td>
             <td>loff_t offset</td>
             <td>loff_t len</td>
             <td>-</td>
@@ -3499,8 +3499,8 @@
             <td><a href="https://man7.org/linux/man-pages/man2/timerfd_settime.2.html">man page</a></td>
             <td>int ufd</td>
             <td>int flags</td>
-            <td>const struct itimerspec *utmr</td>
-            <td>struct itimerspec *otmr</td>
+            <td>const struct __kernel_itimerspec *utmr</td>
+            <td>struct __kernel_itimerspec *otmr</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -3510,7 +3510,7 @@
             <td>timerfd_gettime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/timerfd_gettime.2.html">man page</a></td>
             <td>int ufd</td>
-            <td>struct itimerspec *otmr</td>
+            <td>struct __kernel_itimerspec *otmr</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3654,10 +3654,10 @@
             <td>recvmmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/recvmmsg.2.html">man page</a></td>
             <td>int fd</td>
-            <td>struct msghdr *mmsg</td>
+            <td>struct mmsghdr *msg</td>
             <td>unsigned int vlen</td>
-            <td>unsigned int flags</td>
-            <td>struct timespec *timeout</td>
+            <td>unsigned flags</td>
+            <td>struct __kernel_timespec *timeout</td>
             <td>-</td>
         </tr>
         <tr>
@@ -3677,11 +3677,11 @@
             <td>0x12D</td>
             <td>fanotify_mark</td>
             <td><a href="https://man7.org/linux/man-pages/man2/fanotify_mark.2.html">man page</a></td>
-            <td>long fanotify_fd</td>
-            <td>long flags</td>
-            <td>__u64 mask</td>
-            <td>long dfd</td>
-            <td>long pathname</td>
+            <td>int fanotify_fd</td>
+            <td>unsigned int flags</td>
+            <td>u64 mask</td>
+            <td>int fd</td>
+            <td>const char *pathname</td>
             <td>-</td>
         </tr>
         <tr>
@@ -3713,11 +3713,11 @@
             <td>0x130</td>
             <td>open_by_handle_at</td>
             <td><a href="https://man7.org/linux/man-pages/man2/open_by_handle_at.2.html">man page</a></td>
-            <td>int dfd</td>
-            <td>const char *name</td>
+            <td>int mountdirfd</td>
             <td>struct file_handle *handle</td>
-            <td>int *mnt_id</td>
             <td>int flags</td>
+            <td>-</td>
+            <td>-</td>
             <td>-</td>
         </tr>
         <tr>
@@ -3726,7 +3726,7 @@
             <td>clock_adjtime</td>
             <td><a href="https://man7.org/linux/man-pages/man2/clock_adjtime.2.html">man page</a></td>
             <td>clockid_t which_clock</td>
-            <td>struct timex *tx</td>
+            <td>struct __kernel_timex *tx</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3750,9 +3750,9 @@
             <td>sendmmsg</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sendmmsg.2.html">man page</a></td>
             <td>int fd</td>
-            <td>struct mmsghdr *mmsg</td>
+            <td>struct mmsghdr *msg</td>
             <td>unsigned int vlen</td>
-            <td>unsigned int flags</td>
+            <td>unsigned flags</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -3773,9 +3773,9 @@
             <td>0x135</td>
             <td>getcpu</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getcpu.2.html">man page</a></td>
-            <td>unsigned *cpup</td>
-            <td>unsigned *nodep</td>
-            <td>struct getcpu_cache *unused</td>
+            <td>unsigned *cpu</td>
+            <td>unsigned *node</td>
+            <td>struct getcpu_cache *cache</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3800,7 +3800,7 @@
             <td>pid_t pid</td>
             <td>const struct iovec *lvec</td>
             <td>unsigned long liovcnt</td>
-            <td>const struct iovcc *rvec</td>
+            <td>const struct iovec *rvec</td>
             <td>unsigned long riovcnt</td>
             <td>unsigned long flags</td>
         </tr>
@@ -3822,7 +3822,7 @@
             <td>finit_module</td>
             <td><a href="https://man7.org/linux/man-pages/man2/finit_module.2.html">man page</a></td>
             <td>int fd</td>
-            <td>const char __user *uargs</td>
+            <td>const char *uargs</td>
             <td>int flags</td>
             <td>-</td>
             <td>-</td>
@@ -3834,7 +3834,7 @@
             <td>sched_setattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_setattr.2.html">man page</a></td>
             <td>pid_t pid</td>
-            <td>struct sched_attr __user *attr</td>
+            <td>struct sched_attr *attr</td>
             <td>unsigned int flags</td>
             <td>-</td>
             <td>-</td>
@@ -3846,7 +3846,7 @@
             <td>sched_getattr</td>
             <td><a href="https://man7.org/linux/man-pages/man2/sched_getattr.2.html">man page</a></td>
             <td>pid_t pid</td>
-            <td>struct sched_attr __user *attr</td>
+            <td>struct sched_attr *attr</td>
             <td>unsigned int size</td>
             <td>unsigned int flags</td>
             <td>-</td>
@@ -3858,9 +3858,9 @@
             <td>renameat2</td>
             <td><a href="https://man7.org/linux/man-pages/man2/renameat2.2.html">man page</a></td>
             <td>int olddfd</td>
-            <td>const char __user *oldname</td>
+            <td>const char *oldname</td>
             <td>int newdfd</td>
-            <td>const char __user *newname</td>
+            <td>const char *newname</td>
             <td>unsigned int flags</td>
             <td>-</td>
         </tr>
@@ -3871,7 +3871,7 @@
             <td><a href="https://man7.org/linux/man-pages/man2/seccomp.2.html">man page</a></td>
             <td>unsigned int op</td>
             <td>unsigned int flags</td>
-            <td>const char __user *uargs</td>
+            <td>void *uargs</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3881,7 +3881,7 @@
             <td>0x13E</td>
             <td>getrandom</td>
             <td><a href="https://man7.org/linux/man-pages/man2/getrandom.2.html">man page</a></td>
-            <td>char __user *buf</td>
+            <td>char *buf</td>
             <td>size_t count</td>
             <td>unsigned int flags</td>
             <td>-</td>
@@ -3893,10 +3893,8 @@
             <td>0x13F</td>
             <td>memfd_create</td>
             <td><a href="https://man7.org/linux/man-pages/man2/memfd_create.2.html">man page</a></td>
-            <td>const char __user *uname_ptr</td>
-            <td>unsigned
-                int flags
-            </td>
+            <td>const char *uname_ptr</td>
+            <td>unsigned int flags</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -3910,7 +3908,7 @@
             <td>int kernel_fd</td>
             <td>int initrd_fd</td>
             <td>unsigned long cmdline_len</td>
-            <td>const char __user *cmdline_ptr</td>
+            <td>const char *cmdline_ptr</td>
             <td>unsigned long flags</td>
             <td>-</td>
         </tr>
@@ -3932,9 +3930,9 @@
             <td>stub_execveat</td>
             <td><a href="https://man7.org/linux/man-pages/man2/execveat.2.html">man page</a></td>
             <td>int dfd</td>
-            <td>const char __user *filename</td>
-            <td>const char __user *const __user *argv</td>
-            <td>const char __user *const __user *envp</td>
+            <td>const char *filename</td>
+            <td>const char *const *argv</td>
+            <td>const char *const *envp</td>
             <td>int flags</td>
             <td>-</td>
         </tr>
@@ -3980,9 +3978,9 @@
             <td>copy_file_range</td>
             <td><a href="https://man7.org/linux/man-pages/man2/copy_file_range.2.html">man page</a></td>
             <td>int fd_in</td>
-            <td>loff_t __user *off_in</td>
+            <td>loff_t *off_in</td>
             <td>int fd_out</td>
-            <td>loff_t __user * off_out</td>
+            <td>loff_t *off_out</td>
             <td>size_t len</td>
             <td>unsigned int flags</td>
         </tr>
@@ -3992,11 +3990,11 @@
             <td>preadv2</td>
             <td><a href="https://man7.org/linux/man-pages/man2/preadv2.2.html">man page</a></td>
             <td>unsigned long fd</td>
-            <td>const struct iovec __user *vec</td>
+            <td>const struct iovec *vec</td>
             <td>unsigned long vlen</td>
             <td>unsigned long pos_l</td>
             <td>unsigned long pos_h</td>
-            <td>int flags</td>
+            <td>rwf_t flags</td>
         </tr>
         <tr>
             <td>328</td>
@@ -4004,21 +4002,21 @@
             <td>pwritev2</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pwritev2.2.html">man page</a></td>
             <td>unsigned long fd</td>
-            <td>const struct iovec __user *vec</td>
+            <td>const struct iovec *vec</td>
             <td>unsigned long vlen</td>
             <td>unsigned long pos_l</td>
             <td>unsigned long pos_h</td>
-            <td>int flags</td>
+            <td>rwf_t flags</td>
         </tr>
         <tr>
             <td>329</td>
             <td>0x149</td>
             <td>pkey_mprotect</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pkey_mprotect.2.html">man page</a></td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+            <td>unsigned long start</td>
+            <td>size_t len</td>
+            <td>unsigned long prot</td>
+            <td>int pkey</td>
             <td>-</td>
             <td>-</td>
         </tr>
@@ -4027,8 +4025,8 @@
             <td>0x14A</td>
             <td>pkey_alloc</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pkey_alloc.2.html">man page</a></td>
-            <td>-</td>
-            <td>-</td>
+            <td>unsigned long flags</td>
+            <td>unsigned long init_val</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -4039,7 +4037,7 @@
             <td>0x14B</td>
             <td>pkey_free</td>
             <td><a href="https://man7.org/linux/man-pages/man2/pkey_free.2.html">man page</a></td>
-            <td>-</td>
+            <td>int pkey</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -4051,11 +4049,11 @@
             <td>0x14C</td>
             <td>statx</td>
             <td><a href="https://man7.org/linux/man-pages/man2/statx.2.html">man page</a></td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+            <td>int dfd</td>
+            <td>const char *path</td>
+            <td>unsigned flags</td>
+            <td>unsigned mask</td>
+            <td>struct statx *buffer</td>
             <td>-</td>
         </tr>
         <tr>
